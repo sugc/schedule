@@ -29,7 +29,31 @@ class ViewController: UIViewController {
         
         eventDB.requestAccess(to: EKEntityType.event) { (granted, error) in
             
+            if !granted {
+                return
+            }
+                
             print("request")
+            
+            let alarmStarDate = Date(timeIntervalSinceNow: 20)
+            let alarmEndDate = Date(timeIntervalSinceNow: 30)
+            
+            let event = EKEvent(eventStore: eventDB)
+            event.title = "哈哈哈"
+            event.startDate = alarmStarDate
+            event.endDate = alarmStarDate
+            
+            let alarm = EKAlarm(absoluteDate: alarmStarDate)
+//            alarm.relativeOffset = 5
+            event.addAlarm(alarm)
+            event.calendar = eventDB.defaultCalendarForNewEvents
+            
+            
+            do {
+                try eventDB.save(event, span: EKSpan.thisEvent)
+            }catch {
+            
+            }
         }
 
     }
