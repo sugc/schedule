@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        if UIApplication.shared.currentUserNotificationSettings?.types == nil {
+            let setting1 = UIUserNotificationSettings(types: UIUserNotificationType.sound, categories: nil)
+            let setting2 = UIUserNotificationSettings(types: UIUserNotificationType.alert, categories: nil)
+            let setting3 = UIUserNotificationSettings(types: UIUserNotificationType.badge, categories: nil)
+
+
+            UIApplication.shared.registerUserNotificationSettings(setting1)
+            UIApplication.shared.registerUserNotificationSettings(setting2)
+            UIApplication.shared.registerUserNotificationSettings(setting3)
+
+        
+        
+//        }
+
         return true
     }
 
@@ -42,5 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        
+    }
 }
 

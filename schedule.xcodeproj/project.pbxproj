@@ -34,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A0816BB1EF4137F00A88820 /* schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schedule.entitlements; sourceTree = "<group>"; };
+		8A0816BC1EF4176700A88820 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		8A5D97281EF29FAB004019C9 /* schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A5D972D1EF29FAB004019C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +99,10 @@
 		8A5D972A1EF29FAB004019C9 /* schedule */ = {
 			isa = PBXGroup;
 			children = (
+				8A0816BB1EF4137F00A88820 /* schedule.entitlements */,
 				8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */,
 				8A5D972D1EF29FAB004019C9 /* ViewController.swift */,
+				8A0816BC1EF4176700A88820 /* test.caf */,
 				8A5D972F1EF29FAB004019C9 /* Main.storyboard */,
 				8A5D97321EF29FAB004019C9 /* Assets.xcassets */,
 				8A5D97341EF29FAB004019C9 /* LaunchScreen.storyboard */,
@@ -195,6 +199,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4D8QBLQTY5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					8A5D973B1EF29FAB004019C9 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -518,6 +527,7 @@
 				8A5D97521EF29FAB004019C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A5D97531EF29FAB004019C9 /* Build configuration list for PBXNativeTarget "scheduleTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +536,7 @@
 				8A5D97551EF29FAB004019C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A5D97561EF29FAB004019C9 /* Build configuration list for PBXNativeTarget "scheduleUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +545,7 @@
 				8A5D97581EF29FAB004019C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
