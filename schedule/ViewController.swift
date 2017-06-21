@@ -64,6 +64,56 @@ class ViewController: UIViewController {
         let eventDB = EKEventStore()
         
         
+        eventDB.requestAccess(to: EKEntityType.reminder) { (granted, error) in
+            
+            if !granted {
+                return
+            }
+            
+            print("request")
+            
+            let alarmStarDate = Date(timeIntervalSinceNow: 10)
+            let alarmEndDate = Date(timeIntervalSinceNow: 30)
+            
+            let reminder = EKReminder(eventStore: eventDB)
+            reminder.title = "hehehe"
+            reminder.calendar = eventDB.defaultCalendarForNewReminders()
+            
+            var calendar = Calendar.current
+            calendar.timeZone = NSTimeZone.system
+            
+            var flags = Set<Calendar.Component>()
+            flags.insert(Calendar.Component.year)
+            flags.insert(Calendar.Component.month)
+            flags.insert(Calendar.Component.day)
+            flags.insert(Calendar.Component.hour)
+            flags.insert(Calendar.Component.minute)
+            flags.insert(Calendar.Component.second)
+            
+            let dateCmp = calendar.dateComponents(flags, from: alarmStarDate)
+            let endDateCmp = calendar.dateComponents(flags, from: alarmEndDate)
+            
+            reminder.startDateComponents = dateCmp
+            reminder.dueDateComponents = endDateCmp
+            reminder.priority = 1
+            
+            
+            let alarm = EKAlarm(absoluteDate: alarmStarDate)
+            reminder.addAlarm(alarm)
+            
+           
+            
+            
+            do {
+                try eventDB.save(reminder, commit: true)
+            }catch {
+                
+            }
+        }
+    }
+
+    
+    func addAlarmClock() -> Void {
         let notification = UILocalNotification()
         
         notification.fireDate = Date(timeIntervalSinceNow: 10)
@@ -76,55 +126,7 @@ class ViewController: UIViewController {
         
         notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber + 1
         UIApplication.shared.scheduleLocalNotification(notification)
-        
-//        eventDB.requestAccess(to: EKEntityType.reminder) { (granted, error) in
-//            
-//            if !granted {
-//                return
-//            }
-//            
-//            print("request")
-//            
-//            let alarmStarDate = Date(timeIntervalSinceNow: 10)
-//            let alarmEndDate = Date(timeIntervalSinceNow: 30)
-//            
-//            let reminder = EKReminder(eventStore: eventDB)
-//            reminder.title = "hehehe"
-//            reminder.calendar = eventDB.defaultCalendarForNewReminders()
-//            
-//            var calendar = Calendar.current
-//            calendar.timeZone = NSTimeZone.system
-//            
-//            var flags = Set<Calendar.Component>()
-//            flags.insert(Calendar.Component.year)
-//            flags.insert(Calendar.Component.month)
-//            flags.insert(Calendar.Component.day)
-//            flags.insert(Calendar.Component.hour)
-//            flags.insert(Calendar.Component.minute)
-//            flags.insert(Calendar.Component.second)
-//            
-//            let dateCmp = calendar.dateComponents(flags, from: alarmStarDate)
-//            let endDateCmp = calendar.dateComponents(flags, from: alarmEndDate)
-//            
-//            reminder.startDateComponents = dateCmp
-//            reminder.dueDateComponents = endDateCmp
-//            reminder.priority = 1
-//            
-//            
-//            let alarm = EKAlarm(absoluteDate: alarmStarDate)
-//            reminder.addAlarm(alarm)
-//            
-//           
-//            
-//            
-//            do {
-//                try eventDB.save(reminder, commit: true)
-//            }catch {
-//                
-//            }
-//        }
     }
-
 }
 
 

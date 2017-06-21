@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */; };
+		8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D81EFA874D003E6705 /* CalendarManager.swift */; };
+		8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87DA1EFA8777003E6705 /* LocalNotificationManager.swift */; };
+		8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87DD1EFA8831003E6705 /* EventModel.swift */; };
 		8A5D972C1EF29FAB004019C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */; };
 		8A5D972E1EF29FAB004019C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D972D1EF29FAB004019C9 /* ViewController.swift */; };
 		8A5D97311EF29FAB004019C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D972F1EF29FAB004019C9 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 /* Begin PBXFileReference section */
 		8A0816BB1EF4137F00A88820 /* schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schedule.entitlements; sourceTree = "<group>"; };
 		8A0816BC1EF4176700A88820 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
+		8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
+		8A1E87D81EFA874D003E6705 /* CalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		8A1E87DA1EFA8777003E6705 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		8A1E87DD1EFA8831003E6705 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		8A5D97281EF29FAB004019C9 /* schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A5D972D1EF29FAB004019C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A1E87D31EFA8605003E6705 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */,
+				8A1E87D81EFA874D003E6705 /* CalendarManager.swift */,
+				8A1E87DA1EFA8777003E6705 /* LocalNotificationManager.swift */,
+			);
+			name = Handler;
+			sourceTree = "<group>";
+		};
+		8A1E87D41EFA861B003E6705 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		8A1E87D51EFA8669003E6705 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		8A1E87DC1EFA880F003E6705 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E87DD1EFA8831003E6705 /* EventModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8A5D971F1EF29FAB004019C9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +139,10 @@
 		8A5D972A1EF29FAB004019C9 /* schedule */ = {
 			isa = PBXGroup;
 			children = (
+				8A1E87DC1EFA880F003E6705 /* Model */,
+				8A1E87D41EFA861B003E6705 /* ViewController */,
+				8A1E87D31EFA8605003E6705 /* Handler */,
+				8A1E87D51EFA8669003E6705 /* Resource */,
 				8A0816BB1EF4137F00A88820 /* schedule.entitlements */,
 				8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */,
 				8A5D972D1EF29FAB004019C9 /* ViewController.swift */,
@@ -271,7 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */,
+				8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */,
+				8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */,
 				8A5D972E1EF29FAB004019C9 /* ViewController.swift in Sources */,
+				8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */,
 				8A5D972C1EF29FAB004019C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
