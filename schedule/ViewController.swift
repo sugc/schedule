@@ -7,125 +7,74 @@
 //
 
 import UIKit
-
 import EventKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController, ToucesViewDelegate {
+    
+    var isKeyboardShow : Bool = false
+    @IBOutlet var titleLabel : UILabel!
+    @IBOutlet var textView : UITextView!
+    @IBOutlet var datePicker : UIDatePicker!
+    @IBOutlet weak var comfireBtn: UIButton!
+    @IBOutlet weak var hideKeyBoardView: TouchesView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        addalarmClock()
-        addReminder()
+        datePicker.datePickerMode = UIDatePickerMode.dateAndTime;
+        hideKeyBoardView.delegate = self;
+        self.addNotification()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func addNotification() -> Void {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
-
     
-    func addalarmClock()-> Void  {
-        let eventDB = EKEventStore()
+    func keyboardShow() {
+        isKeyboardShow = true
+    }
+    
+    func keyboardHide() {
+        isKeyboardShow = false
+    }
+    
+    //******************** About UI Event ***********************//
+    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+        //判断是否小于当前时间
+    }
+    
+    
+    @IBAction func actionConfirm(_ sender: UIButton) {
+        if textView.text == nil || textView.text == "" {
+            return
+        }
+        let date = datePicker.date;
+        addLocalNotification(title: textView.text, fireDate: date)
+    }
+    
+    func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        //判断
+        if !isKeyboardShow {
+            return nil
+        }
         
-        eventDB.requestAccess(to: EKEntityType.event) { (granted, error) in
+        let textFrame = textView.frame;
+        if textFrame.contains(point) {
+            let layoutManager = textView.layoutManager
+            var newPoint = hideKeyBoardView.convert(point, to: textView)
+            //
+            newPoint.x -= textView.textContainerInset.left
+            newPoint.y -= textView.textContainerInset.top
+            let index = layoutManager.characterIndex(for: newPoint, in:textView.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
             
-            if !granted {
-                return
-            }
-                
-            print("request")
-            
-            let alarmStarDate = Date(timeIntervalSinceNow: 10)
-            let alarmEndDate = Date(timeIntervalSinceNow: 30)
-            
-            let event = EKEvent(eventStore: eventDB)
-            event.title = "哈哈哈"
-            
-            event.startDate = alarmStarDate
-            event.endDate = alarmStarDate
-            
-            let alarm = EKAlarm(absoluteDate: alarmStarDate)
-            event.addAlarm(alarm)
-            
-            event.calendar = eventDB.defaultCalendarForNewEvents
-            
-            
-            do {
-                try eventDB.save(event, span: EKSpan.thisEvent)
-            }catch {
-                
+            let length = (textView.text! as NSString).length
+            if index < (length - 1) {
+                 return nil
             }
         }
-
-    }
-    
-    func addReminder()  {
-        let eventDB = EKEventStore()
-        
-        
-        eventDB.requestAccess(to: EKEntityType.reminder) { (granted, error) in
-            
-            if !granted {
-                return
-            }
-            
-            print("request")
-            
-            let alarmStarDate = Date(timeIntervalSinceNow: 10)
-            let alarmEndDate = Date(timeIntervalSinceNow: 30)
-            
-            let reminder = EKReminder(eventStore: eventDB)
-            reminder.title = "hehehe"
-            reminder.calendar = eventDB.defaultCalendarForNewReminders()
-            
-            var calendar = Calendar.current
-            calendar.timeZone = NSTimeZone.system
-            
-            var flags = Set<Calendar.Component>()
-            flags.insert(Calendar.Component.year)
-            flags.insert(Calendar.Component.month)
-            flags.insert(Calendar.Component.day)
-            flags.insert(Calendar.Component.hour)
-            flags.insert(Calendar.Component.minute)
-            flags.insert(Calendar.Component.second)
-            
-            let dateCmp = calendar.dateComponents(flags, from: alarmStarDate)
-            let endDateCmp = calendar.dateComponents(flags, from: alarmEndDate)
-            
-            reminder.startDateComponents = dateCmp
-            reminder.dueDateComponents = endDateCmp
-            reminder.priority = 1
-            
-            
-            let alarm = EKAlarm(absoluteDate: alarmStarDate)
-            reminder.addAlarm(alarm)
-            
-           
-            
-            
-            do {
-                try eventDB.save(reminder, commit: true)
-            }catch {
-                
-            }
-        }
-    }
-
-    
-    func addAlarmClock() -> Void {
-        let notification = UILocalNotification()
-        
-        notification.fireDate = Date(timeIntervalSinceNow: 10)
-        notification.repeatInterval = NSCalendar.Unit.minute
-        notification.timeZone = NSTimeZone.default
-        notification.soundName = "test.caf"
-        notification.alertBody = "哈哈哈"
-        notification.alertAction = "ds"
-        notification.userInfo = ["us":"d"]
-        
-        notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber + 1
-        UIApplication.shared.scheduleLocalNotification(notification)
+        self.view.endEditing(true)
+        return hideKeyBoardView;
     }
 }
 

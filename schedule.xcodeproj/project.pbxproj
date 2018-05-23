@@ -18,6 +18,7 @@
 		8A5D97361EF29FAB004019C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D97341EF29FAB004019C9 /* LaunchScreen.storyboard */; };
 		8A5D97411EF29FAB004019C9 /* scheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D97401EF29FAB004019C9 /* scheduleTests.swift */; };
 		8A5D974C1EF29FAB004019C9 /* scheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D974B1EF29FAB004019C9 /* scheduleUITests.swift */; };
+		8AD11D3820B57A4400966295 /* TouchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD11D3720B57A4400966295 /* TouchesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		8A5D97471EF29FAB004019C9 /* scheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5D974B1EF29FAB004019C9 /* scheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleUITests.swift; sourceTree = "<group>"; };
 		8A5D974D1EF29FAB004019C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6632171EFBC7D100127B65 /* PLWallpaperImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLWallpaperImageViewController.h; sourceTree = "<group>"; };
+		8AD11D3720B57A4400966295 /* TouchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 		8A1E87D41EFA861B003E6705 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8A5D972F1EF29FAB004019C9 /* Main.storyboard */,
+				8A5D972D1EF29FAB004019C9 /* ViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 		8A1E87D51EFA8669003E6705 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8A6632171EFBC7D100127B65 /* PLWallpaperImageViewController.h */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -139,15 +145,14 @@
 		8A5D972A1EF29FAB004019C9 /* schedule */ = {
 			isa = PBXGroup;
 			children = (
+				8AD11D3620B57A2800966295 /* Util */,
 				8A1E87DC1EFA880F003E6705 /* Model */,
 				8A1E87D41EFA861B003E6705 /* ViewController */,
 				8A1E87D31EFA8605003E6705 /* Handler */,
 				8A1E87D51EFA8669003E6705 /* Resource */,
 				8A0816BB1EF4137F00A88820 /* schedule.entitlements */,
 				8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */,
-				8A5D972D1EF29FAB004019C9 /* ViewController.swift */,
 				8A0816BC1EF4176700A88820 /* test.caf */,
-				8A5D972F1EF29FAB004019C9 /* Main.storyboard */,
 				8A5D97321EF29FAB004019C9 /* Assets.xcassets */,
 				8A5D97341EF29FAB004019C9 /* LaunchScreen.storyboard */,
 				8A5D97371EF29FAB004019C9 /* Info.plist */,
@@ -171,6 +176,14 @@
 				8A5D974D1EF29FAB004019C9 /* Info.plist */,
 			);
 			path = scheduleUITests;
+			sourceTree = "<group>";
+		};
+		8AD11D3620B57A2800966295 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8AD11D3720B57A4400966295 /* TouchesView.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +249,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "魔方";
 				TargetAttributes = {
 					8A5D97271EF29FAB004019C9 = {
@@ -317,6 +330,7 @@
 			files = (
 				8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */,
 				8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */,
+				8AD11D3820B57A4400966295 /* TouchesView.swift in Sources */,
 				8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */,
 				8A5D972E1EF29FAB004019C9 /* ViewController.swift in Sources */,
 				8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */,
@@ -385,15 +399,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -436,15 +458,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
