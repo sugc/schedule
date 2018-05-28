@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89C3663E20BA61170077E0C7 /* AlterViewTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663D20BA61170077E0C7 /* AlterViewTool.swift */; };
+		89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */; };
+		89C3664220BA6BB60077E0C7 /* Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C3664120BA6BB60077E0C7 /* Reminder.storyboard */; };
+		89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3664320BA6E3F0077E0C7 /* ViewController.swift */; };
+		89C3664620BA7E960077E0C7 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3664520BA7E960077E0C7 /* ReminderModel.swift */; };
 		8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */; };
 		8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D81EFA874D003E6705 /* CalendarManager.swift */; };
 		8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87DA1EFA8777003E6705 /* LocalNotificationManager.swift */; };
 		8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87DD1EFA8831003E6705 /* EventModel.swift */; };
 		8A5D972C1EF29FAB004019C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */; };
-		8A5D972E1EF29FAB004019C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D972D1EF29FAB004019C9 /* ViewController.swift */; };
 		8A5D97311EF29FAB004019C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D972F1EF29FAB004019C9 /* Main.storyboard */; };
 		8A5D97331EF29FAB004019C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D97321EF29FAB004019C9 /* Assets.xcassets */; };
 		8A5D97361EF29FAB004019C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D97341EF29FAB004019C9 /* LaunchScreen.storyboard */; };
@@ -39,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89C3663D20BA61170077E0C7 /* AlterViewTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterViewTool.swift; sourceTree = "<group>"; };
+		89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		89C3664120BA6BB60077E0C7 /* Reminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
+		89C3664320BA6E3F0077E0C7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89C3664520BA7E960077E0C7 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		8A0816BB1EF4137F00A88820 /* schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schedule.entitlements; sourceTree = "<group>"; };
 		8A0816BC1EF4176700A88820 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
@@ -47,7 +56,6 @@
 		8A1E87DD1EFA8831003E6705 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		8A5D97281EF29FAB004019C9 /* schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A5D972D1EF29FAB004019C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A5D97301EF29FAB004019C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A5D97321EF29FAB004019C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A5D97351EF29FAB004019C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +108,10 @@
 		8A1E87D41EFA861B003E6705 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				89C3664320BA6E3F0077E0C7 /* ViewController.swift */,
 				8A5D972F1EF29FAB004019C9 /* Main.storyboard */,
-				8A5D972D1EF29FAB004019C9 /* ViewController.swift */,
+				89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */,
+				89C3664120BA6BB60077E0C7 /* Reminder.storyboard */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -118,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8A1E87DD1EFA8831003E6705 /* EventModel.swift */,
+				89C3664520BA7E960077E0C7 /* ReminderModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD11D3720B57A4400966295 /* TouchesView.swift */,
+				89C3663D20BA61170077E0C7 /* AlterViewTool.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -301,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C3664220BA6BB60077E0C7 /* Reminder.storyboard in Resources */,
 				8A5D97361EF29FAB004019C9 /* LaunchScreen.storyboard in Resources */,
 				8A5D97331EF29FAB004019C9 /* Assets.xcassets in Resources */,
 				8A5D97311EF29FAB004019C9 /* Main.storyboard in Resources */,
@@ -331,10 +344,13 @@
 				8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */,
 				8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */,
 				8AD11D3820B57A4400966295 /* TouchesView.swift in Sources */,
+				89C3664620BA7E960077E0C7 /* ReminderModel.swift in Sources */,
+				89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */,
 				8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */,
-				8A5D972E1EF29FAB004019C9 /* ViewController.swift in Sources */,
+				89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */,
 				8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */,
 				8A5D972C1EF29FAB004019C9 /* AppDelegate.swift in Sources */,
+				89C3663E20BA61170077E0C7 /* AlterViewTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -491,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -506,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D8QBLQTY5;
 				INFOPLIST_FILE = schedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sugc.schedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,7 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D8QBLQTY5;
 				INFOPLIST_FILE = schedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sugc.schedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";

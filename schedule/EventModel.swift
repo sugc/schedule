@@ -16,7 +16,6 @@ enum EventType: Int {
 }
 
 struct EventModel {
-    
     //根据json初始化
     init(json:String) {
         

@@ -15,11 +15,6 @@ protocol ToucesViewDelegate {
 
 class TouchesView: UIView {
     var delegate : ToucesViewDelegate!
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        [super .touchesBegan(touches, with: event)]
-    }
-    
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         return delegate.hitTest(point,with: event)
     }

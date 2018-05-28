@@ -15,6 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let nav = UINavigationController.init()
+        self.window = UIWindow()
+        window?.rootViewController = nav;
+        //开始root
+        let story = UIStoryboard.init(name: "Reminder", bundle: nil)
+        let homeView = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
+        
+        nav.pushViewController(homeView, animated: false)
+        
         // Override point for customization after application launch.
         
 //        if UIApplication.shared.currentUserNotificationSettings?.types == nil {
