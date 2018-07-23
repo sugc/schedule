@@ -15,6 +15,7 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
     
     var isKeyboardShow : Bool = false
     let delayTime : TimeInterval = 60 * 10
+    var swipeGesture : UISwipeGestureRecognizer!
     @IBOutlet weak var bgImageView : UIImageView!
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var textView : UITextView!
@@ -29,6 +30,9 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
         self.navigationController?.navigationBar.isHidden = true
         self.addNotification()
         self.reset()
+        swipeGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(swipeToLeft(gesture:)))
+        swipeGesture.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(swipeGesture)
     }
     
     func addNotification() -> Void {
@@ -69,10 +73,19 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
             self.present(alter!, animated: true, completion: nil);
             return
         }
-        
+
         //添加通知成功
-        let date = datePicker.date;
+        let date = datePicker.date
         addLocalNotification(title: textView.text, fireDate: date)
+        
+        //数据库处理
+        var event = EventModel.init()
+        event.createDate = Date().timeIntervalSince1970
+        event.remindDate = date.timeIntervalSince1970
+        event.eventTitle = textView.text
+        DBManager.singleTon().saveEventToDB(eventModel: event)
+        
+        //
         let alter = simpleCancelAler(title: "事件已添加", message: nil)
         self.present(alter!, animated: true, completion: nil);
         reset()
@@ -105,5 +118,12 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
         textView.text = nil
         let peridictDate = Date.init(timeIntervalSinceNow: delayTime)
         datePicker.setDate(peridictDate, animated: true)
+
+    }
+    
+    func swipeToLeft(gesture:UISwipeGestureRecognizer) {
+        let story = UIStoryboard.init(name: "Reminder", bundle: nil)
+        let remindListVC = story.instantiateViewController(withIdentifier: "RemindListViewController") as! RemindListViewController
+        self.navigationController?.pushViewController(remindListVC, animated: true)
     }
 }

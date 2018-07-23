@@ -22,25 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //开始root
         let story = UIStoryboard.init(name: "Reminder", bundle: nil)
         let homeView = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
-        
         nav.pushViewController(homeView, animated: false)
-        
-        // Override point for customization after application launch.
-        
-//        if UIApplication.shared.currentUserNotificationSettings?.types == nil {
-            let setting1 = UIUserNotificationSettings(types: UIUserNotificationType.sound, categories: nil)
-            let setting2 = UIUserNotificationSettings(types: UIUserNotificationType.alert, categories: nil)
-            let setting3 = UIUserNotificationSettings(types: UIUserNotificationType.badge, categories: nil)
-
-
-            UIApplication.shared.registerUserNotificationSettings(setting1)
-            UIApplication.shared.registerUserNotificationSettings(setting2)
-            UIApplication.shared.registerUserNotificationSettings(setting3)
-
-        
-        
-//        }
-
+        addLocalNotification()
         return true
     }
 
@@ -68,7 +51,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-        
+        let types = notificationSettings.types
+        if  types.rawValue == 0{
+            //显示弹窗
+            return;
+        }
     }
+    
+    //收到通知
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        
+        //判断是否在前台
+        if application.applicationState == UIApplicationState.active {
+            
+        }
+        //
+
+    }
+    
+    
+    //注册本地通知
+    func addLocalNotification() {
+        
+        let settings = UIApplication.shared.currentUserNotificationSettings!
+        let types = settings.types
+        if  types.rawValue ==  7
+        {
+            //判断是否需要在请求通知权限
+            return;
+        }
+
+
+        let category = UIMutableUserNotificationCategory()
+        category.identifier = "magic_schedule_category"
+        
+        let setting1 = UIUserNotificationSettings(types: UIUserNotificationType.sound, categories: [category])
+        let setting2 = UIUserNotificationSettings(types: UIUserNotificationType.alert, categories: [category])
+        let setting3 = UIUserNotificationSettings(types: UIUserNotificationType.badge, categories: [category])
+        UIApplication.shared.registerUserNotificationSettings(setting1)
+        UIApplication.shared.registerUserNotificationSettings(setting2)
+        UIApplication.shared.registerUserNotificationSettings(setting3)
+    }
+    
 }
 

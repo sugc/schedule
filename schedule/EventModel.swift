@@ -9,6 +9,7 @@
 import Foundation
 
 
+
 enum EventType: Int {
     case remind = 0
     case calendar = 1
@@ -17,8 +18,14 @@ enum EventType: Int {
 
 struct EventModel {
     //根据json初始化
-    init(json:String) {
+    init() {
         
     }
-    
+    init(json:String) {
+        //数据库处理？
+    }
+    var eventTitle : String!
+    var createDate : TimeInterval!      //事件添加时间
+    var remindDate : TimeInterval!    //事件提醒时间
 }
+

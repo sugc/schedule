@@ -9,21 +9,42 @@
 import Foundation
 import UIKit
 
+let kNotificationkey : String = "kNotificationkey"
+
 class LocalNotificationManager {
     
     
     
 }
 
+func removeNotification() {
+    let notifications = UIApplication.shared.scheduledLocalNotifications
+    
+    //获取当前的通知
+    
+//    UIApplication.shared.cancelLocalNotification(<#T##notification: UILocalNotification##UILocalNotification#>)
+}
+
+func removeNotification(notificationInfo:EventModel) {
+    let notifications = UIApplication.shared.scheduledLocalNotifications
+    
+}
+
 func addLocalNotification(title:String!, fireDate:Date!) -> Void {
+//    let date = Date.init(timeIntervalSinceNow: 20)
     UIApplication.shared.cancelAllLocalNotifications()
     let notification = UILocalNotification()
     notification.fireDate = fireDate
     notification.timeZone = NSTimeZone.default
     notification.soundName = "test.caf"
     notification.alertBody = title
+    notification.applicationIconBadgeNumber = 1
     notification.alertAction = "ds"
-    notification.userInfo = ["us":"d"]
-    //notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber + 1
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+    let dateStr = dateFormatter.string(from: fireDate)
+    let keyStr = dateStr.appending(title)
+    notification.userInfo = [kNotificationkey:keyStr]
+    notification.applicationIconBadgeNumber = 1
     UIApplication.shared.scheduleLocalNotification(notification)
 }
