@@ -33,6 +33,11 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
         swipeGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(swipeToLeft(gesture:)))
         swipeGesture.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(swipeGesture)
+        
+//        let tomatoVC = TomatoViewController()
+//        self.navigationController?.pushViewController(tomatoVC, animated: true)
+        
+        
     }
     
     func addNotification() -> Void {
@@ -63,7 +68,7 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
     
     @IBAction func actionConfirm(_ sender: UIButton) {
         if textView.text == nil || textView.text == "" {
-            let alter = simpleCancelAler(title: "内容不能为空", message: nil)
+            let alter = simpleCancelAler(title: "内容不能为空", message: nil )
             self.present(alter!, animated: true, completion: nil);
             return
         }
@@ -86,9 +91,17 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
         DBManager.singleTon().saveEventToDB(eventModel: event)
         
         //
-        let alter = simpleCancelAler(title: "事件已添加", message: nil)
+        let alter = simpleCancelAler(title: "事件已添加", message: nil) { (action) in
+            self.actionClose(nil)
+        }
         self.present(alter!, animated: true, completion: nil);
         reset()
+    }
+    
+    @IBAction func actionClose(_ sender: UIButton?) {
+        self.dismiss(animated: true) {
+            
+        }
     }
     
     func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {

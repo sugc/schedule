@@ -4,7 +4,42 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Crashlytics.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Fabric.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Firebase.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseAnalytics.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseInstanceID.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Google-Mobile-Ads-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,17 +59,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ReactiveCocoa.xcscheme</key>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ReactiveSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Result.xcscheme</key>
+		<key>WZYCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

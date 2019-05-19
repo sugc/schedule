@@ -96,7 +96,7 @@ func addReminder(message:String!)  {
         do {
             try eventDB.save(reminder, commit: true)
         }catch {
-            
+            //添加失败
         }
     }
 }

@@ -1,0 +1,6 @@
+framework module WZYCalendar {
+  umbrella header "WZYCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}

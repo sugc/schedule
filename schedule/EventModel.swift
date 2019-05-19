@@ -27,5 +27,9 @@ struct EventModel {
     var eventTitle : String!
     var createDate : TimeInterval!      //事件添加时间
     var remindDate : TimeInterval!    //事件提醒时间
+    
+    func getStamp()->String {   
+        return eventTitle + String.init(format: "%ld", createDate);
+    }
 }
 

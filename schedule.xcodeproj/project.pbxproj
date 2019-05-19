@@ -9,8 +9,29 @@
 /* Begin PBXBuildFile section */
 		535194D70211F2DE1031EC89 /* Pods_schedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F222BAEFF2F315F5316989D /* Pods_schedule.framework */; };
 		8909ABE120DFDFEF00F13AE9 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8909ABE020DFDFEF00F13AE9 /* DBManager.swift */; };
+		89145FD021F44890006D26E6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89145FCF21F44890006D26E6 /* CalendarViewController.swift */; };
+		89145FD421F44E94006D26E6 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89145FD221F44E94006D26E6 /* UIView+Utils.swift */; };
+		89145FD521F44E94006D26E6 /* UIButton+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89145FD321F44E94006D26E6 /* UIButton+image.swift */; };
+		89145FD721F49A8A006D26E6 /* RemindTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89145FD621F49A8A006D26E6 /* RemindTableViewManager.swift */; };
+		8918CDD72211D84F00F3568C /* MusicCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8918CDD62211D84F00F3568C /* MusicCollectionViewManager.swift */; };
+		891AD8882200A6D60005F21B /* TopBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891AD8872200A6D60005F21B /* TopBarCell.swift */; };
+		891AD88A2200AE4E0005F21B /* TopBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891AD8892200AE4E0005F21B /* TopBarManager.swift */; };
+		8920F2C3222CAD0A00C537A5 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920F2C2222CAD0A00C537A5 /* AudioPlayer.swift */; };
+		8922316021FA22FD00720A98 /* SleepAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */; };
+		8922316221FA237800720A98 /* DetailFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922316121FA237800720A98 /* DetailFunctionViewController.swift */; };
+		8922316421FA23ED00720A98 /* DetailFunctionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922316321FA23ED00720A98 /* DetailFunctionManager.swift */; };
 		893C84CF20DC0D900007337E /* RemindListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893C84CE20DC0D900007337E /* RemindListViewController.swift */; };
+		8966FCDC214D37A8005F1D8E /* TomatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966FCDB214D37A8005F1D8E /* TomatoViewController.swift */; };
+		8966FCDE214D3C61005F1D8E /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966FCDD214D3C61005F1D8E /* CountDownView.swift */; };
+		89842210221645DF00B0536B /* MusicMaterialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984220F221645DF00B0536B /* MusicMaterialManager.swift */; };
+		8984221222164AB900B0536B /* MusicMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984221122164AB900B0536B /* MusicMaterialModel.swift */; };
+		89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */; };
+		89AA151421EF872C00A095DD /* DesignedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA151321EF872C00A095DD /* DesignedUtils.swift */; };
+		89ADEF2422918C330037B4F4 /* Animal in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2222918C330037B4F4 /* Animal */; };
+		89ADEF2522918C330037B4F4 /* Natural in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2322918C330037B4F4 /* Natural */; };
 		89B3832C20F211920096AD4D /* RemindListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3832B20F211920096AD4D /* RemindListViewCell.swift */; };
+		89B3C7EB2214F05400B4A6D1 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */; };
+		89C2E5E122494AD500950999 /* AudioMixTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2E5E022494AD500950999 /* AudioMixTool.swift */; };
 		89C3663E20BA61170077E0C7 /* AlterViewTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663D20BA61170077E0C7 /* AlterViewTool.swift */; };
 		89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */; };
 		89C3664220BA6BB60077E0C7 /* Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C3664120BA6BB60077E0C7 /* Reminder.storyboard */; };
@@ -52,8 +73,29 @@
 		63785137CEE0861F63DA6A7C /* Pods-schedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-schedule/Pods-schedule.debug.xcconfig"; sourceTree = "<group>"; };
 		8909ABDF20DFD79000F13AE9 /* schedule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "schedule-Bridging-Header.h"; sourceTree = "<group>"; };
 		8909ABE020DFDFEF00F13AE9 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		89145FCF21F44890006D26E6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		89145FD221F44E94006D26E6 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		89145FD321F44E94006D26E6 /* UIButton+image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+image.swift"; sourceTree = "<group>"; };
+		89145FD621F49A8A006D26E6 /* RemindTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindTableViewManager.swift; sourceTree = "<group>"; };
+		8918CDD62211D84F00F3568C /* MusicCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewManager.swift; sourceTree = "<group>"; };
+		891AD8872200A6D60005F21B /* TopBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarCell.swift; sourceTree = "<group>"; };
+		891AD8892200AE4E0005F21B /* TopBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarManager.swift; sourceTree = "<group>"; };
+		8920F2C2222CAD0A00C537A5 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAudioViewController.swift; sourceTree = "<group>"; };
+		8922316121FA237800720A98 /* DetailFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFunctionViewController.swift; sourceTree = "<group>"; };
+		8922316321FA23ED00720A98 /* DetailFunctionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFunctionManager.swift; sourceTree = "<group>"; };
 		893C84CE20DC0D900007337E /* RemindListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindListViewController.swift; sourceTree = "<group>"; };
+		8966FCDB214D37A8005F1D8E /* TomatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoViewController.swift; sourceTree = "<group>"; };
+		8966FCDD214D3C61005F1D8E /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
+		8984220F221645DF00B0536B /* MusicMaterialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaterialManager.swift; sourceTree = "<group>"; };
+		8984221122164AB900B0536B /* MusicMaterialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaterialModel.swift; sourceTree = "<group>"; };
+		89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFuncTableViewCell.swift; sourceTree = "<group>"; };
+		89AA151321EF872C00A095DD /* DesignedUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignedUtils.swift; sourceTree = "<group>"; };
+		89ADEF2222918C330037B4F4 /* Animal */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animal; sourceTree = "<group>"; };
+		89ADEF2322918C330037B4F4 /* Natural */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Natural; sourceTree = "<group>"; };
 		89B3832B20F211920096AD4D /* RemindListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindListViewCell.swift; sourceTree = "<group>"; };
+		89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		89C2E5E022494AD500950999 /* AudioMixTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixTool.swift; sourceTree = "<group>"; };
 		89C3663D20BA61170077E0C7 /* AlterViewTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterViewTool.swift; sourceTree = "<group>"; };
 		89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		89C3664120BA6BB60077E0C7 /* Reminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
@@ -77,7 +119,6 @@
 		8A5D97471EF29FAB004019C9 /* scheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5D974B1EF29FAB004019C9 /* scheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleUITests.swift; sourceTree = "<group>"; };
 		8A5D974D1EF29FAB004019C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A6632171EFBC7D100127B65 /* PLWallpaperImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLWallpaperImageViewController.h; sourceTree = "<group>"; };
 		8AD11D3720B57A4400966295 /* TouchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,10 +157,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		89145FD121F44E94006D26E6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89145FD221F44E94006D26E6 /* UIView+Utils.swift */,
+				89145FD321F44E94006D26E6 /* UIButton+image.swift */,
+			);
+			name = Extension;
+			path = "../../LonelyPlanet-ios/LonelyPlanet/LonelyPlanet/Extension";
+			sourceTree = "<group>";
+		};
+		89ADEEEB229152650037B4F4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				89ADEF2222918C330037B4F4 /* Animal */,
+				89ADEF2322918C330037B4F4 /* Natural */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		89B3832A20F2106C0096AD4D /* View */ = {
 			isa = PBXGroup;
 			children = (
 				89B3832B20F211920096AD4D /* RemindListViewCell.swift */,
+				8966FCDD214D3C61005F1D8E /* CountDownView.swift */,
+				89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */,
+				891AD8872200A6D60005F21B /* TopBarCell.swift */,
+				89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -130,6 +194,13 @@
 				8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */,
 				8A1E87D81EFA874D003E6705 /* CalendarManager.swift */,
 				8A1E87DA1EFA8777003E6705 /* LocalNotificationManager.swift */,
+				8909ABE020DFDFEF00F13AE9 /* DBManager.swift */,
+				89145FD621F49A8A006D26E6 /* RemindTableViewManager.swift */,
+				8922316321FA23ED00720A98 /* DetailFunctionManager.swift */,
+				891AD8892200AE4E0005F21B /* TopBarManager.swift */,
+				8918CDD62211D84F00F3568C /* MusicCollectionViewManager.swift */,
+				8984220F221645DF00B0536B /* MusicMaterialManager.swift */,
+				8920F2C2222CAD0A00C537A5 /* AudioPlayer.swift */,
 			);
 			name = Handler;
 			sourceTree = "<group>";
@@ -142,16 +213,12 @@
 				89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */,
 				89C3664120BA6BB60077E0C7 /* Reminder.storyboard */,
 				893C84CE20DC0D900007337E /* RemindListViewController.swift */,
+				8966FCDB214D37A8005F1D8E /* TomatoViewController.swift */,
+				89145FCF21F44890006D26E6 /* CalendarViewController.swift */,
+				8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */,
+				8922316121FA237800720A98 /* DetailFunctionViewController.swift */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		8A1E87D51EFA8669003E6705 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				8A6632171EFBC7D100127B65 /* PLWallpaperImageViewController.h */,
-			);
-			name = Resource;
 			sourceTree = "<group>";
 		};
 		8A1E87DC1EFA880F003E6705 /* Model */ = {
@@ -159,7 +226,7 @@
 			children = (
 				8A1E87DD1EFA8831003E6705 /* EventModel.swift */,
 				89C3664520BA7E960077E0C7 /* ReminderModel.swift */,
-				8909ABE020DFDFEF00F13AE9 /* DBManager.swift */,
+				8984221122164AB900B0536B /* MusicMaterialModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -190,16 +257,17 @@
 		8A5D972A1EF29FAB004019C9 /* schedule */ = {
 			isa = PBXGroup;
 			children = (
+				89145FD121F44E94006D26E6 /* Extension */,
 				8AD11D3620B57A2800966295 /* Util */,
 				8A1E87DC1EFA880F003E6705 /* Model */,
 				89B3832A20F2106C0096AD4D /* View */,
 				8A1E87D41EFA861B003E6705 /* ViewController */,
 				8A1E87D31EFA8605003E6705 /* Handler */,
-				8A1E87D51EFA8669003E6705 /* Resource */,
 				8A0816BB1EF4137F00A88820 /* schedule.entitlements */,
 				8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */,
 				8A0816BC1EF4176700A88820 /* test.caf */,
 				8A5D97321EF29FAB004019C9 /* Assets.xcassets */,
+				89ADEEEB229152650037B4F4 /* Resource */,
 				8A5D97341EF29FAB004019C9 /* LaunchScreen.storyboard */,
 				8A5D97371EF29FAB004019C9 /* Info.plist */,
 			);
@@ -227,8 +295,10 @@
 		8AD11D3620B57A2800966295 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				89AA151321EF872C00A095DD /* DesignedUtils.swift */,
 				8AD11D3720B57A4400966295 /* TouchesView.swift */,
 				89C3663D20BA61170077E0C7 /* AlterViewTool.swift */,
+				89C2E5E022494AD500950999 /* AudioMixTool.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -314,6 +384,9 @@
 						DevelopmentTeam = 4D8QBLQTY5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 0;
 							};
@@ -358,6 +431,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89ADEF2522918C330037B4F4 /* Natural in Resources */,
+				89ADEF2422918C330037B4F4 /* Animal in Resources */,
 				89C3664220BA6BB60077E0C7 /* Reminder.storyboard in Resources */,
 				8A5D97361EF29FAB004019C9 /* LaunchScreen.storyboard in Resources */,
 				8A5D97331EF29FAB004019C9 /* Assets.xcassets in Resources */,
@@ -388,13 +463,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/WZYCalendar/WZYCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -402,14 +476,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WZYCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5B0BA9AEE0AE5F28A798FB7A /* [CP] Check Pods Manifest.lock */ = {
@@ -438,17 +511,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */,
+				8922316021FA22FD00720A98 /* SleepAudioViewController.swift in Sources */,
+				8920F2C3222CAD0A00C537A5 /* AudioPlayer.swift in Sources */,
 				8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */,
+				89145FD421F44E94006D26E6 /* UIView+Utils.swift in Sources */,
+				891AD8882200A6D60005F21B /* TopBarCell.swift in Sources */,
+				89AA151421EF872C00A095DD /* DesignedUtils.swift in Sources */,
+				89842210221645DF00B0536B /* MusicMaterialManager.swift in Sources */,
 				89B3832C20F211920096AD4D /* RemindListViewCell.swift in Sources */,
+				89145FD521F44E94006D26E6 /* UIButton+image.swift in Sources */,
 				8AD11D3820B57A4400966295 /* TouchesView.swift in Sources */,
+				891AD88A2200AE4E0005F21B /* TopBarManager.swift in Sources */,
 				89C3664620BA7E960077E0C7 /* ReminderModel.swift in Sources */,
+				8918CDD72211D84F00F3568C /* MusicCollectionViewManager.swift in Sources */,
+				89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */,
 				89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */,
+				8922316221FA237800720A98 /* DetailFunctionViewController.swift in Sources */,
+				89B3C7EB2214F05400B4A6D1 /* MusicCollectionViewCell.swift in Sources */,
 				8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */,
+				89C2E5E122494AD500950999 /* AudioMixTool.swift in Sources */,
+				8984221222164AB900B0536B /* MusicMaterialModel.swift in Sources */,
+				89145FD021F44890006D26E6 /* CalendarViewController.swift in Sources */,
 				893C84CF20DC0D900007337E /* RemindListViewController.swift in Sources */,
+				89145FD721F49A8A006D26E6 /* RemindTableViewManager.swift in Sources */,
+				8966FCDE214D3C61005F1D8E /* CountDownView.swift in Sources */,
 				8909ABE120DFDFEF00F13AE9 /* DBManager.swift in Sources */,
 				89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */,
+				8966FCDC214D37A8005F1D8E /* TomatoViewController.swift in Sources */,
 				8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */,
 				8A5D972C1EF29FAB004019C9 /* AppDelegate.swift in Sources */,
+				8922316421FA23ED00720A98 /* DetailFunctionManager.swift in Sources */,
 				89C3663E20BA61170077E0C7 /* AlterViewTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,26 +13,31 @@ let kNotificationkey : String = "kNotificationkey"
 
 class LocalNotificationManager {
     
-    
-    
+
 }
 
-func removeNotification() {
-    let notifications = UIApplication.shared.scheduledLocalNotifications
-    
-    //获取当前的通知
-    
-//    UIApplication.shared.cancelLocalNotification(<#T##notification: UILocalNotification##UILocalNotification#>)
+func removeAllNotification() {
+    //移除所有的通知
+    let notifications : Array<UILocalNotification> = UIApplication.shared.scheduledLocalNotifications!
+    for notification  in notifications {
+        UIApplication.shared.cancelLocalNotification(notification)
+    }
 }
 
 func removeNotification(notificationInfo:EventModel) {
-    let notifications = UIApplication.shared.scheduledLocalNotifications
-    
+    let notifications : Array<UILocalNotification> = UIApplication.shared.scheduledLocalNotifications!
+    for notification  in notifications {
+        if notification.fireDate?.timeIntervalSince1970 == notificationInfo.remindDate  &&
+            notification.alertBody == notificationInfo.eventTitle{
+            //时间和提示信息相等，则移除该通知
+            UIApplication.shared.cancelLocalNotification(notification)
+        }
+    }
 }
 
 func addLocalNotification(title:String!, fireDate:Date!) -> Void {
 //    let date = Date.init(timeIntervalSinceNow: 20)
-    UIApplication.shared.cancelAllLocalNotifications()
+//    UIApplication.shared.cancelAllLocalNotifications()
     let notification = UILocalNotification()
     notification.fireDate = fireDate
     notification.timeZone = NSTimeZone.default
@@ -41,7 +46,7 @@ func addLocalNotification(title:String!, fireDate:Date!) -> Void {
     notification.applicationIconBadgeNumber = 1
     notification.alertAction = "ds"
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+    dateFormatter.dateFormat = "yyyy-MM-dd HH"
     let dateStr = dateFormatter.string(from: fireDate)
     let keyStr = dateStr.appending(title)
     notification.userInfo = [kNotificationkey:keyStr]

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C7B6684BE7B3B4F019DBECD2C7B982CB"
+               BlueprintIdentifier = "F42CD65A16B6BD3A2E9A4D3993775AB3"
                BuildableName = "Pods_schedule.framework"
                BlueprintName = "Pods-schedule"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7B6684BE7B3B4F019DBECD2C7B982CB"
+            BlueprintIdentifier = "F42CD65A16B6BD3A2E9A4D3993775AB3"
             BuildableName = "Pods_schedule.framework"
             BlueprintName = "Pods-schedule"
             ReferencedContainer = "container:Pods.xcodeproj">

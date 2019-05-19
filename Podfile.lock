@@ -30,11 +30,10 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - ReactiveCocoa (6.0.2):
-    - ReactiveSwift (~> 2.0)
-  - ReactiveSwift (2.0.1):
-    - Result (~> 3.2)
-  - Result (3.2.4)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - WZYCalendar (1.0.3)
 
 DEPENDENCIES:
   - Crashlytics
@@ -43,7 +42,8 @@ DEPENDENCIES:
   - Firebase/Core
   - FMDB
   - MBProgressHUD
-  - ReactiveCocoa (~> 6.0)
+  - SDWebImage
+  - WZYCalendar (from `/Users/sugc/WZYCalendar/WZYCalendar.podspec`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -58,9 +58,11 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - MBProgressHUD
     - nanopb
-    - ReactiveCocoa
-    - ReactiveSwift
-    - Result
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  WZYCalendar:
+    :path: "/Users/sugc/WZYCalendar/WZYCalendar.podspec"
 
 SPEC CHECKSUMS:
   Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
@@ -74,10 +76,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  ReactiveCocoa: 9dcbd8275374f35a6e5fcce01a93b860a7b92c44
-  ReactiveSwift: 60a29ff35988a964fd2bb759755cb6594de523fc
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  WZYCalendar: c0d2f4cc57e4d871b7482230b83de7beab0bd724
 
-PODFILE CHECKSUM: e045ab6da98aed176a6efe08a04ddad13cf12dce
+PODFILE CHECKSUM: c838bf4c82f5c1fb26bb2d11a084ce8fc0d60296
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

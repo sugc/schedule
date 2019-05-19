@@ -12,18 +12,36 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var navigationViewController : UINavigationController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let nav = UINavigationController.init()
+        navigationViewController = UINavigationController.init()
+        let tab = UITabBarController.init()
+        
         self.window = UIWindow()
-        window?.rootViewController = nav;
+        window?.rootViewController = navigationViewController;
+        navigationViewController.navigationBar.isHidden = true
         //开始root
         let story = UIStoryboard.init(name: "Reminder", bundle: nil)
-        let homeView = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
-        nav.pushViewController(homeView, animated: false)
+//        let homeView = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
+//        nav.pushViewController(homeView, animated: false)
+//        homeView.title = "提醒"
+        
+        let calendarVC = CalendarViewController()
+        calendarVC.title = "日历"
+        
+        let sleepVC = SleepAudioViewController()
+        sleepVC.title = "助眠"
+        
+        let detailVC = DetailFunctionViewController()
+        detailVC.title = "更多"
+        
+        navigationViewController.viewControllers = [tab]
+        tab.viewControllers = [calendarVC,sleepVC, detailVC];
+
         addLocalNotification()
+        AudioPlayer.initSession()
         return true
     }
 

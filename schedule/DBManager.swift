@@ -47,14 +47,34 @@ class DBManager  {
     }
     
     func deleteEvent(eventModel:EventModel!)  {
-        
+        let sql = "DELETE FROM EVENT WHERE Title = ? AND CREATETIME = ?"
+        dbHandler.executeUpdate(sql, withArgumentsIn: [eventModel.eventTitle, eventModel.createDate])
     }
     
-    func allEvent() -> Array<EventModel>? {
-        let quryStr = "select * from EVENT ORDER BY CreateTime"
+    func allEvent() -> Array<EventModel> {
+        let quryStr = "select * from EVENT ORDER BY CREATETIME"
         var array : Array<EventModel> = Array()
         do {
             let result = try dbHandler.executeQuery(quryStr, values: nil)
+            while result.next() {
+                var eventModel = EventModel()
+                eventModel.eventTitle = result.object(forColumn: "Title") as? String
+                eventModel.createDate = result.object(forColumn: "CreateTime") as? TimeInterval
+                eventModel.remindDate = result.object(forColumn: "RemindTime") as? TimeInterval
+                array.append(eventModel)
+            }
+        }catch {
+            print("qury something wrong")
+        }
+        return array
+    }
+    
+    func eventForDate(date:Date) -> Array<EventModel> {
+        let interval = date.timeIntervalSince1970
+        let quryStr = "select * from EVENT WHERE RemindTime >= ? AND RemindTime <= ? ORDER BY CREATETIME"
+        var array : Array<EventModel> = Array()
+        do {
+            let result = try dbHandler.executeQuery(quryStr, values: [interval, interval + 60 * 60 * 24])
             while result.next() {
                 var eventModel = EventModel()
                 eventModel.eventTitle = result.object(forColumn: "Title") as! String

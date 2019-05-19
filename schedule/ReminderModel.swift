@@ -11,7 +11,6 @@ import Foundation
 
 //提醒事件数据结构
 struct ReminderModel {
-    
     var remindKey : String!
     var remindDate : Date!
     var remindMsg : String!

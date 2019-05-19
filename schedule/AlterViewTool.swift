@@ -17,3 +17,11 @@ func simpleCancelAler(title:String?, message:String?) ->UIAlertController!{
     alterView.addAction(action)
     return alterView
 }
+
+func simpleCancelAler(title:String?, message:String?, handler:((UIAlertAction)->Void)?) ->UIAlertController!{
+    let alterView = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    let action = UIAlertAction.init(title: "确定", style: UIAlertActionStyle.cancel, handler:handler)
+    
+    alterView.addAction(action)
+    return alterView
+}
