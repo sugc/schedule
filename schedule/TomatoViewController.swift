@@ -21,6 +21,7 @@ class TomatoViewController : UIViewController {
     var countDonwView : CountDownView!
     var isCurrentRestTime : Bool = false //在工作还是休息
     var enterbackGroundTime : Date?      //进入后台的时间
+    var countDonwTime : TimeInterval = 25 * 60
     
     private var mottoTextView : UITextView!
     private var cancelBtn : UIButton!  //
@@ -123,17 +124,21 @@ class TomatoViewController : UIViewController {
         alertVC = nil
         
         
-        countDonwView.starCountDown(countDownTimeInterval: TimeInterval(10))
+        //显示继续页面
         
-        if isCurrentRestTime {
-            //判断是否需要进入下一个工作循环
-            
-        }else {
-            //判断是否已经完全全部
-            
-            //进入休息时间，提示还有下一个循环
-        }
-        //写入记录
+        showReStarAlert()
+        
+//        countDonwView.starCountDown(countDownTimeInterval: countDonwTime)
+//
+//        if isCurrentRestTime {
+//            //判断是否需要进入下一个工作循环
+//
+//        }else {
+//            //判断是否已经完全全部
+//
+//            //进入休息时间，提示还有下一个循环
+//        }
+//        //写入记录
     }
     
     //获取番茄
@@ -191,6 +196,32 @@ class TomatoViewController : UIViewController {
         alertVC!.addAction(confirmAction)
         self.present(alertVC!, animated: true, completion: nil)
 
+    }
+    
+    func showReStarAlert() -> Void {
+        //判断当前时间
+//        if isCurrentRestTime || countDonwView.remiandTimeInterval <= 5 {
+//            self.navigationController?.popViewController(animated: true)
+//            return
+//        }
+        
+        let confirmAction = UIAlertAction.init(title: "退出",
+                                               style: UIAlertActionStyle.default,
+                                               handler: ({ (action) in
+                                                self.navigationController?.popViewController(animated: true)
+                                               }))
+        let cancelAction = UIAlertAction.init(title: "继续",
+                                              style: UIAlertActionStyle.default,
+                                              handler: ({(action)in
+                                                self.countDonwView.starCountDown(countDownTimeInterval: self.countDonwTime)
+                                              }))
+        let alert = UIAlertController.init(title: "",
+                                         message: "恭喜完成任务，是否继续",
+                                         preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     //点击屏幕常亮按钮

@@ -65,9 +65,23 @@ class MusicCollectionViewCell : UICollectionViewCell {
     
     func layout() -> Void {
         let size = self.width * 0.5
-        let imgFrame = CGRect(x: (self.width - size) / 2.0,
+        let maskFrame = CGRect(x: (self.width - size) / 2.0,
                               y: 0, width: size,
                               height: size)
+        
+        maskImageView = UIImageView.init(frame: maskFrame)
+        maskImageView.layer.cornerRadius = maskImageView.width / 2.0
+        maskImageView.layer.masksToBounds = true
+        maskImageView.alpha = 0.3
+        maskImageView.isHidden = true
+        maskImageView.backgroundColor = UIColor.blue
+        
+        //计算
+        let imgSize = size  / pow(2, 0.5)
+        let imgFrame = CGRect(x: (self.width - imgSize) / 2.0,
+                              y: self.maskImageView.top + (self.maskImageView.height - imgSize) / 2.0,
+                              width: imgSize,
+                              height: imgSize)
         imageView = UIImageView(frame: imgFrame)
         imageView.contentMode = UIViewContentMode.scaleAspectFit
         var labelH = self.height - imageView.bottom
@@ -84,12 +98,9 @@ class MusicCollectionViewCell : UICollectionViewCell {
                                       y: labelY,
                                       width: self.width,
                                       height: labelH))
+        
+        
         imageView.image = UIImage.init(named: "icon_light_selected")
-        maskImageView = UIImageView.init(frame: imageView.frame)
-        maskImageView.layer.cornerRadius = maskImageView.width / 2.0
-        maskImageView.layer.masksToBounds = true
-        maskImageView.alpha = 0.3
-        maskImageView.isHidden = true
         label.text = "sunshime"
         label.textColor = UIColor.lightGray
         label.textAlignment = NSTextAlignment.center

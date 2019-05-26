@@ -11,15 +11,16 @@ import AVKit
 
 @objc protocol MusicCollectionDelegate : NSObjectProtocol {
     @objc func didSelectWithModels(selectModels : Array<MusicMaterialModel>)->Void
+    @objc func deSelectWithTag(tag : Int, row : Int)->Void
 }
 
 class MusicCollectionViewManager : NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     weak var delegate : MusicCollectionDelegate?
-    private var selectIndex : Dictionary<String, Set<String>> = Dictionary()
+    private var selectIndex : Dictionary<String, String> = Dictionary()
     private var selectModels : Array<MusicMaterialModel> = Array()
     
-    private var player : AVAudioPlayer?
+    var player : AVAudioPlayer?
     
     var numberOfCollection : Int {
         get {
@@ -54,41 +55,46 @@ class MusicCollectionViewManager : NSObject, UICollectionViewDelegate, UICollect
                 if (model.imageUrl != nil) {
                     cell.image = UIImage.init(named: model.imageUrl!)
                 }
+                let key = model.name!
+                let value : String? = selectIndex[key]
+                if value != nil {
+                    cell.isShowMask = true
+                }
             }
         }
-        
-        let key = String.init(format:"%ld", collectionView.tag)
-        let value = String.init(format:"%ld", indexPath.row)
-        let set : Set<String>? = selectIndex[key]
-        if set != nil && set!.contains(value){
-            cell.isShowMask = true
-        }
-        
         return cell
     }
     
     //选中
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //选中状态
-        let key = String.init(format:"%ld", collectionView.tag)
-        let value = String.init(format:"%ld", indexPath.row)
-        var set : Set<String>? = selectIndex[key]
-        if  set == nil {
-            set = Set()
-            selectIndex[key] = set
-        }
-        set?.insert(value)
-        //
-        
-        let cell = collectionView.cellForItem(at: indexPath) as? MusicCollectionViewCell
-        cell?.isShowMask = true
         
         guard let model = self.modelInCollectionView(collectionView: collectionView, indexPath: indexPath) else {
             return
         }
+
+        //选中状态
+        let key = model.name!
+        var value : String? = selectIndex[key]
+        if  value == nil {
+            value = String.init(format: "%ld,%ld", collectionView.tag,indexPath.row)
+            selectIndex[key] = value
+        }
+    
+        
+        let cell = collectionView.cellForItem(at: indexPath) as? MusicCollectionViewCell
+        cell?.isShowMask = true
+        
+        
+        var rmModel : MusicMaterialModel? = nil
+        if selectModels.count >= 3 {
+            rmModel = selectModels.removeLast()
+            //取消选中
+        }
         
         if !selectModels.contains(model) {
             selectModels.append(model)
+            
+            //
         }
         
         AudioPlayer.playWithModels(models: selectModels)
@@ -99,27 +105,25 @@ class MusicCollectionViewManager : NSObject, UICollectionViewDelegate, UICollect
         
         //获取model
         
-        //开始播放
+        if rmModel != nil {
+            self.deSelectWithMode(rmModel: rmModel)
+        }
     }
     
     //取消选中
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        //非选中状态
-        let key = String.init(format:"%ld", collectionView.tag)
-        let value = String.init(format:"%ld", indexPath.row)
-        var set : Set<String>? = selectIndex[key]
-        if  set == nil {
-            set = Set()
-            selectIndex[key] = set
-        }
-        set?.remove(value)
-        let cell = collectionView.cellForItem(at: indexPath) as? MusicCollectionViewCell
-        cell?.isShowMask = false
-        
         
         guard let model = self.modelInCollectionView(collectionView: collectionView, indexPath: indexPath) else {
             return
         }
+        
+        //非选中状态
+        let key = model.name!
+        selectIndex.removeValue(forKey: key)
+        let cell = collectionView.cellForItem(at: indexPath) as? MusicCollectionViewCell
+        cell?.isShowMask = false
+        
+        
         selectModels.removeAll { (removeModel) -> Bool in
             return removeModel.localUrl == model.localUrl
         }
@@ -143,4 +147,20 @@ class MusicCollectionViewManager : NSObject, UICollectionViewDelegate, UICollect
         return nil
     }
     
+    func deSelectWithMode(rmModel : MusicMaterialModel!) {
+        
+        guard let indexStr = selectIndex[rmModel.name!] else {
+            return
+        }
+    
+        
+        let index = indexStr.split(separator:",")
+        let tag = Int(index.first!)!
+        let row = Int(index.last!)!
+        
+        if delegate?.responds(to: #selector(MusicCollectionDelegate.deSelectWithTag(tag:row:))) ?? false {
+            delegate!.deSelectWithTag(tag: tag, row: row)
+        }
+        
+    }
 }

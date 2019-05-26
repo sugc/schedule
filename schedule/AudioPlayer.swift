@@ -9,126 +9,56 @@
 import Foundation
 import AVKit
 
-var player : AVAudioPlayer?
 var currentMaterials : NSMutableSet = NSMutableSet()
 var playerDic : Dictionary<String, AVAudioPlayer> = Dictionary()
 
 class AudioPlayer : NSObject {
     
-    static func star()  {
-        player?.play()
+    static var isPlaying : Bool{
+        get {
+            for player in playerDic.values {
+                if player.isPlaying {
+                    return true
+                }
+            }
+            return false
+        }
     }
     
+    static var hasPlayItems : Bool{
+        get {
+            return playerDic.values.count > 0
+        }
+    }
     static func playerInstance(url : URL!) ->AVAudioPlayer? {
         var playerInstance : AVAudioPlayer?
         do {
             try playerInstance = AVAudioPlayer.init(contentsOf: url)
-            player?.numberOfLoops = -1
+            playerInstance?.numberOfLoops = -1
         }catch {
             print("play audio error")
         }
         return playerInstance
     }
     
-    static func star(url:URL!) {
-        player = self.playerInstance(url: url)
-        player?.play()
-    }
-    
     static func stop()  {
-        player?.stop()
-    }
-    
-    static func pause()  {
-        player?.pause()
-    }
-    
-    static func resume()  {
-        player?.play()
-    }
-    
-    static func resume(url:URL)  {
-        var starTime : TimeInterval = 0
-        if player != nil {
-            player?.stop()
-            starTime = player!.currentTime
-        }
-        
-        player = self.playerInstance(url: url)
-        player?.currentTime = starTime
-        player?.numberOfLoops = -1
-        player?.play()
-    }
-    
-    static func resumeWithModels(models:Array<MusicMaterialModel>) {
-        var starTime : TimeInterval = 0
-        if player != nil {
-            player?.stop()
-            starTime = player!.currentTime
-        }
-        
-        currentMaterials.removeAllObjects()
-        for model in models {
-            guard let path = model.localUrl else {
-                continue
-            }
-            currentMaterials.add(path)
-        }
-        
-        AudioMixTool.mixAudioInPathes(pathes: currentMaterials.allObjects as! Array<String>) { (url) in
-            //开始播放
-            self.resume(url: url)
+        for player in playerDic.values {
+            player.stop()
         }
     }
     
-    
-    static func add(model:MusicMaterialModel?) {
-        
-        guard let model = model else {
-            return
-        }
-        
-        //转成路径
-        guard let filePath = model.localUrl else {
-            return
-        }
-        
-        currentMaterials.add(filePath)
-        AudioMixTool.mixAudioInPathes(pathes: currentMaterials.allObjects as! Array<String>) { (url) in
-            //开始播放
-            self.resume(url: url)
+    static func pause() {
+        for player in playerDic.values {
+            player.pause()
         }
     }
     
-    static func add(path:String!) {
-        //转成路径
-        currentMaterials.add(path)
-        AudioMixTool.mixAudioInPathes(pathes: currentMaterials.allObjects as! Array<String>) { (url) in
-            //开始播放
-            self.resume(url: url)
+    static func resume() {
+        for player in playerDic.values {
+            player.play()
         }
     }
-    
-    static func remove(model:MusicMaterialModel?) {
-        
-        guard let model = model else {
-            return
-        }
-        
-        guard let filePath = model.localUrl else {
-            return
-        }
-        
-        currentMaterials.remove(filePath)
-        if currentMaterials.count <= 0 {
-            self.stop()
-        }
-        
-        AudioMixTool.mixAudioInPathes(pathes: currentMaterials.allObjects as! Array<String>) { (url) in
-            //开始播放
-            self.resume(url: url)
-        }
-    }
+
     
     //初始化session
     static func initSession() {
@@ -144,7 +74,6 @@ class AudioPlayer : NSObject {
     }
     
     //处理进入后台，耳机插入，电话等事件
-    
     static func playWithModels(models:Array<MusicMaterialModel>) {
         
         var dic : Dictionary<String, AVAudioPlayer> = Dictionary()

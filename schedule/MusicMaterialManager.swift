@@ -123,7 +123,6 @@ class MusicMaterialManager {
     
     static func dataWithType(type:String) -> Array<Dictionary<String,Any>>? {
         let path = Bundle.main.path(forResource: type, ofType: nil)
-//        let path = Bundle.main.path(forResource: "碧海涛声", ofType: ".mp3")
         guard let dic = path else {
             return nil
         }

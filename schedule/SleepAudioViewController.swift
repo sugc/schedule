@@ -60,7 +60,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         let playerFrame = CGRect.init(x: 15,
                                       y: topBarView.bottom + 25,
                                       width: ScreenWidth - 30,
-                                      height: 150)
+                                      height: (ScreenWidth - 30) * 0.4)
         playerView = UIImageView.init(frame: playerFrame)
         playerView.isUserInteractionEnabled = true
         playerView.backgroundColor = UIColor.blue
@@ -79,15 +79,16 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
             imageViews.append(imageView)
         }
         
-        let playBtnFrame = CGRect.init(x: (playerFrame.size.width - 40) / 2.0,
-                                       y: (playerFrame.size.height - 40) / 2.0 ,
-                                       width: 40,
-                                       height: 40)
+        let playBtnFrame = CGRect.init(x: playerFrame.size.width - 30 - 20,
+                                       y: 15,
+                                       width: 30,
+                                       height: 30)
         playBtn = UIButton.init(frame: playBtnFrame)
-        playBtn.setImage(UIImage.init(named: "icon_add"), for: UIControlState.normal)
-        playBtn.isHidden = true
+        playBtn.showsTouchWhenHighlighted = false
+        playBtn.addTarget(self, action: #selector(playMusic), for: UIControlEvents.touchUpInside)
         playerView.addSubview(playBtn)
- 
+        refreshPlayBtn()
+        
         let maskView = UIView.init(frame: playerView.frame)
         maskView.layer.shadowOffset = CGSize.init(width: 2, height: 2)
         
@@ -143,6 +144,22 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         }
     }
     
+    func playMusic() {
+        //播放音乐
+        if AudioPlayer.isPlaying {
+            AudioPlayer.pause()
+        }else {
+             AudioPlayer.resume()
+        }
+        refreshPlayBtn()
+    }
+    
+    func refreshPlayBtn() {
+        playBtn.isHidden = !AudioPlayer.hasPlayItems
+        let imgName = AudioPlayer.isPlaying ? "icon_pause" : "icon_play"
+        playBtn.setBackgroundImage(UIImage.init(named: imgName), for: UIControlState.normal)
+    }
+    
     func didSelectAtIndex(index : NSInteger)->Void {
         //滚动到某个位置
         scrollView.setContentOffset(CGPoint(x: scrollView.width * CGFloat(index), y: 0), animated: true)
@@ -167,13 +184,20 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
             }
         }
         
-        if selectModels.count > 0 {
-            playBtn.isHidden = false
-        }else {
-            playBtn.isHidden = true
-        }
+        refreshPlayBtn()
     }
 
+    func deSelectWithTag(tag : Int, row : Int) {
+        for collectionView in musicCollectionViews {
+            if collectionView.tag == tag {
+                collectionView.deselectItem(at: IndexPath.init(row: row, section: 0), animated: true)
+            
+                let cell  = collectionView.cellForItem(at: IndexPath.init(row: row, section: 0)) as? MusicCollectionViewCell
+                cell?.isShowMask = false
+            }
+        }
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //
         let offset = scrollView.contentOffset.x

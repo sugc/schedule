@@ -138,6 +138,7 @@ class CountDownView : UIView {
     func finishCountDown() -> Void {
         timer?.cancel()
         timer = nil
+        
         if (self.finishCountDownClosure != nil) {
             self.finishCountDownClosure!()
         }
