@@ -59,7 +59,6 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
         let date = sender.date
         let interval = date.timeIntervalSinceNow
         if interval < delayTime {
-            //提示不能少于半小时
             let peridictDate = Date.init(timeIntervalSinceNow: delayTime)
             sender.setDate(peridictDate, animated: true)
         }

@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow()
         window?.rootViewController = navigationViewController;
         navigationViewController.navigationBar.isHidden = true
+        navigationViewController.interactivePopGestureRecognizer?.isEnabled = false
         //开始root
         let story = UIStoryboard.init(name: "Reminder", bundle: nil)
 //        let homeView = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
@@ -29,13 +30,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        homeView.title = "提醒"
         
         let calendarVC = CalendarViewController()
-        calendarVC.title = "日历"
+        let tabBar1 = UITabBarItem.init(title: "日历", image: UIImage.init(named: "icon_tab_calendar"), selectedImage: nil)
+        
+        calendarVC.tabBarItem = tabBar1
         
         let sleepVC = SleepAudioViewController()
-        sleepVC.title = "助眠"
+        let tabBar2 = UITabBarItem.init(title: "助眠", image: UIImage.init(named: "icon_tab_sleep"), selectedImage: nil)
+        sleepVC.tabBarItem = tabBar2
         
         let detailVC = DetailFunctionViewController()
-        detailVC.title = "更多"
+        let tabBar3 = UITabBarItem.init(title: "更多", image: UIImage.init(named: "icon_tab_more"), selectedImage: nil)
+        detailVC.tabBarItem = tabBar3
         
         navigationViewController.viewControllers = [tab]
         tab.viewControllers = [calendarVC,sleepVC, detailVC];

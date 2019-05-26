@@ -131,29 +131,29 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                         "action" : "goClock"
                     ],
                     
-                    [
-                        "title" : "生日提醒",
-                        "leftImage" : "",
-                        "rightImage" : "icon_right_arrow",
-                        "type" : "",
-                        "action" : "goBirthDay"
-                    ],
+//                    [
+//                        "title" : "生日提醒",
+//                        "leftImage" : "",
+//                        "rightImage" : "icon_right_arrow",
+//                        "type" : "",
+//                        "action" : "goBirthDay"
+//                    ],
                     
-                    [
-                        "title" : "设置",
-                        "leftImage" : "",
-                        "rightImage" : "icon_right_arrow",
-                        "type" : "",
-                        "action" : "goSettings"
-                    ],
+//                    [
+//                        "title" : "设置",
+//                        "leftImage" : "",
+//                        "rightImage" : "icon_right_arrow",
+//                        "type" : "",
+//                        "action" : "goSettings"
+//                    ],
                     
-                    [
-                        "title" : "挑战记录",
-                        "leftImage" : "",
-                        "rightImage" : "icon_right_arrow",
-                        "type" : "",
-                        "action" : "goSettings"
-                    ],
+//                    [
+//                        "title" : "挑战记录",
+//                        "leftImage" : "",
+//                        "rightImage" : "icon_right_arrow",
+//                        "type" : "",
+//                        "action" : "goSettings"
+//                    ],
                 ]
             ],
             

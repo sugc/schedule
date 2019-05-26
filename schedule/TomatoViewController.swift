@@ -72,7 +72,7 @@ class TomatoViewController : UIViewController {
                                 height: width)
         
         countDonwView = CountDownView.init(frame: frame)
-        countDonwView.starCountDown(countDownTimeInterval: TimeInterval(10))
+        countDonwView.starCountDown(countDownTimeInterval: countDonwTime)
         weak var weakSelf = self
         countDonwView.finishCountDownClosure = {
             weakSelf?.finishCountDonw()
@@ -234,7 +234,6 @@ class TomatoViewController : UIViewController {
         }
         UIApplication.shared.isIdleTimerDisabled = lightBtn.isSelected
         //显示message
-        
     }
     
     deinit {

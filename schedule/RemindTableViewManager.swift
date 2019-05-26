@@ -12,7 +12,7 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
     
     var dataArray : Array<EventModel> = []
     weak var tableView : UITableView?
-    
+    weak var ViewController : UIViewController?
     override init() {
         super.init()
 //        dataArray = DBManager.singleTon().allEvent()
@@ -24,6 +24,9 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
         tableView?.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -80,7 +83,8 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
             let alertController = UIAlertController.init(title: "删除后将不提醒该事件，是否确定删除", message: "", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(okAction)
             alertController.addAction(cancelAction)
-//            self.present(alertController, animated: true, completion: nil)
+            
+            self.ViewController?.present(alertController, animated: true, completion: nil)
             
         }else {
             _ = self.deleteReminderInIndexPath(path: path)
@@ -90,7 +94,7 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
     func deleteReminderInIndexPath(path : IndexPath) -> EventModel {
         let model = dataArray.remove(at: path.row)
         DBManager.singleTon().deleteEvent(eventModel: model)
-//        tableView.deleteRows(at: [path], with: UITableViewRowAnimation.top)
+        tableView?.deleteRows(at: [path], with: UITableViewRowAnimation.top)
         return model;
     }
 }
