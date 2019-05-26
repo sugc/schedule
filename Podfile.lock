@@ -33,6 +33,7 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - skpsmtpmessage (0.0.1)
   - WZYCalendar (1.0.3)
 
 DEPENDENCIES:
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - FMDB
   - MBProgressHUD
   - SDWebImage
+  - skpsmtpmessage
   - WZYCalendar (from `/Users/sugc/WZYCalendar/WZYCalendar.podspec`)
 
 SPEC REPOS:
@@ -59,6 +61,7 @@ SPEC REPOS:
     - MBProgressHUD
     - nanopb
     - SDWebImage
+    - skpsmtpmessage
 
 EXTERNAL SOURCES:
   WZYCalendar:
@@ -77,8 +80,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  skpsmtpmessage: f6e913380c784dd8d4a9f83c8790a302445a5e05
   WZYCalendar: c0d2f4cc57e4d871b7482230b83de7beab0bd724
 
-PODFILE CHECKSUM: c838bf4c82f5c1fb26bb2d11a084ce8fc0d60296
+PODFILE CHECKSUM: a7638deb3be2727a0faa880682277a5f2c236503
 
 COCOAPODS: 1.6.0.beta.2

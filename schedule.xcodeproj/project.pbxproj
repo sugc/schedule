@@ -25,6 +25,8 @@
 		8966FCDE214D3C61005F1D8E /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966FCDD214D3C61005F1D8E /* CountDownView.swift */; };
 		89842210221645DF00B0536B /* MusicMaterialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984220F221645DF00B0536B /* MusicMaterialManager.swift */; };
 		8984221222164AB900B0536B /* MusicMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984221122164AB900B0536B /* MusicMaterialModel.swift */; };
+		898F6B20229A4E1F00FD855E /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F6B1F229A4E1F00FD855E /* SuggestionViewController.swift */; };
+		898F6B22229A507A00FD855E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F6B21229A507A00FD855E /* AboutViewController.swift */; };
 		89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */; };
 		89AA151421EF872C00A095DD /* DesignedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA151321EF872C00A095DD /* DesignedUtils.swift */; };
 		89ADEF2422918C330037B4F4 /* Animal in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2222918C330037B4F4 /* Animal */; };
@@ -89,6 +91,8 @@
 		8966FCDD214D3C61005F1D8E /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8984220F221645DF00B0536B /* MusicMaterialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaterialManager.swift; sourceTree = "<group>"; };
 		8984221122164AB900B0536B /* MusicMaterialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaterialModel.swift; sourceTree = "<group>"; };
+		898F6B1F229A4E1F00FD855E /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		898F6B21229A507A00FD855E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFuncTableViewCell.swift; sourceTree = "<group>"; };
 		89AA151321EF872C00A095DD /* DesignedUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignedUtils.swift; sourceTree = "<group>"; };
 		89ADEF2222918C330037B4F4 /* Animal */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animal; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				89C3664320BA6E3F0077E0C7 /* ViewController.swift */,
+				898F6B1F229A4E1F00FD855E /* SuggestionViewController.swift */,
 				8A5D972F1EF29FAB004019C9 /* Main.storyboard */,
 				89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */,
 				89C3664120BA6BB60077E0C7 /* Reminder.storyboard */,
@@ -217,6 +222,7 @@
 				89145FCF21F44890006D26E6 /* CalendarViewController.swift */,
 				8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */,
 				8922316121FA237800720A98 /* DetailFunctionViewController.swift */,
+				898F6B21229A507A00FD855E /* AboutViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/WZYCalendar/WZYCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/skpsmtpmessage/skpsmtpmessage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -479,6 +486,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WZYCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/skpsmtpmessage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,6 +532,7 @@
 				891AD88A2200AE4E0005F21B /* TopBarManager.swift in Sources */,
 				89C3664620BA7E960077E0C7 /* ReminderModel.swift in Sources */,
 				8918CDD72211D84F00F3568C /* MusicCollectionViewManager.swift in Sources */,
+				898F6B20229A4E1F00FD855E /* SuggestionViewController.swift in Sources */,
 				89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */,
 				89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */,
 				8922316221FA237800720A98 /* DetailFunctionViewController.swift in Sources */,
@@ -535,6 +544,7 @@
 				893C84CF20DC0D900007337E /* RemindListViewController.swift in Sources */,
 				89145FD721F49A8A006D26E6 /* RemindTableViewManager.swift in Sources */,
 				8966FCDE214D3C61005F1D8E /* CountDownView.swift in Sources */,
+				898F6B22229A507A00FD855E /* AboutViewController.swift in Sources */,
 				8909ABE120DFDFEF00F13AE9 /* DBManager.swift in Sources */,
 				89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */,
 				8966FCDC214D37A8005F1D8E /* TomatoViewController.swift in Sources */,

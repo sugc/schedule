@@ -11,6 +11,7 @@ pod 'Crashlytics'
 pod 'MBProgressHUD'
 #pod 'libWeChatSDK', '~> 1.7.1'
 pod 'WZYCalendar', :path => '/Users/sugc/WZYCalendar/WZYCalendar.podspec'
+pod 'skpsmtpmessage'
 pod 'SDWebImage'
 
 end

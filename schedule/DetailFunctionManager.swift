@@ -98,6 +98,15 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                 
                 if action == "goSettings" {
                     //去基本设置
+                   
+                }
+                
+                if action == "goSuggestion" {
+                     self.goSuggestion()
+                }
+                
+                if action == "goAbout" {
+                    goAbout()
                 }
             }
         }
@@ -116,6 +125,16 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
     
     func goSettings() {
         //
+    }
+    
+    func goSuggestion() {
+        let sugVC = SuggestionViewController()
+         (UIApplication.shared.delegate as! AppDelegate).navigationViewController.pushViewController(sugVC, animated: true)
+    }
+    
+    func goAbout() {
+        let aboutVC = AboutViewController()
+        (UIApplication.shared.delegate as! AppDelegate).navigationViewController.pushViewController(aboutVC, animated: true)
     }
     
     func setConfig() {
@@ -165,7 +184,7 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                         "leftImage" : "",
                         "rightImage" : "icon_right_arrow",
                         "type" : "",
-                        "action" : "goSettings"
+                        "action" : "goSuggestion"
                     ],
                     
                     [
@@ -173,7 +192,7 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                         "leftImage" : "",
                         "rightImage" : "icon_right_arrow",
                         "type" : "",
-                        "action" : "goSettings"
+                        "action" : "goAbout"
                     ],
                 ]
             ]

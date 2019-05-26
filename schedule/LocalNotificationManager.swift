@@ -43,7 +43,6 @@ func addLocalNotification(title:String!, fireDate:Date!) -> Void {
     notification.timeZone = NSTimeZone.default
     notification.soundName = "test.caf"
     notification.alertBody = title
-    notification.applicationIconBadgeNumber = 1
     notification.alertAction = "ds"
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd HH"
