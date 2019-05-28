@@ -34,9 +34,6 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
         swipeGesture.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(swipeGesture)
         
-//        let tomatoVC = TomatoViewController()
-//        self.navigationController?.pushViewController(tomatoVC, animated: true)
-        
         
     }
     

@@ -24,12 +24,13 @@ class AboutViewController : UIViewController {
         self.view.addSubview(leftButton)
         
         
-        let imgW : CGFloat = 40
+        let imgW : CGFloat = 90
         let imgFrame = CGRect.init(x: (ScreenWidth - imgW) / 2.0,
-                                   y: (ScreenHeight - imgW) / 2.0, width: imgW,
+                                   y: (ScreenHeight - imgW) / 2.0 - 40, width: imgW,
                                    height: imgW)
         let imageView = UIImageView.init(frame: imgFrame)
         imageView.layer.cornerRadius = 5
+        imageView.image = UIImage.init(named: "AppIcon")
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
         

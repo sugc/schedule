@@ -53,7 +53,6 @@ func addAlarmClock() -> Void {
     notification.alertBody = "哈哈哈"
     notification.alertAction = "ds"
     notification.userInfo = ["us":"d"]
-    notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber + 1
     UIApplication.shared.scheduleLocalNotification(notification)
 }
 

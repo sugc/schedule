@@ -49,6 +49,5 @@ func addLocalNotification(title:String!, fireDate:Date!) -> Void {
     let dateStr = dateFormatter.string(from: fireDate)
     let keyStr = dateStr.appending(title)
     notification.userInfo = [kNotificationkey:keyStr]
-    notification.applicationIconBadgeNumber = 1
     UIApplication.shared.scheduleLocalNotification(notification)
 }

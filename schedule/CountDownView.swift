@@ -98,7 +98,7 @@ class CountDownView : UIView {
         //记录开始时间
         starTime = Date()
         timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global())
-        timer!.setEventHandler {
+        timer?.setEventHandler {
             //处理倒计时
             if (self.remiandCountDown > 0) {
                 self.remiandCountDown = self.remiandCountDown - 1;
@@ -109,9 +109,9 @@ class CountDownView : UIView {
                 self.showLabelWithRemindCountDown(remindTime: self.remiandCountDown)
             }
         }
-        timer!.scheduleRepeating(deadline: DispatchTime.now(), interval: DispatchTimeInterval.seconds(1), leeway: DispatchTimeInterval.seconds(0))
+        timer?.scheduleRepeating(deadline: DispatchTime.now(), interval: DispatchTimeInterval.seconds(1), leeway: DispatchTimeInterval.seconds(0))
         dispatch_queue_main_t.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            self.timer!.resume()
+            self.timer?.resume()
         }
     }
     
@@ -129,19 +129,37 @@ class CountDownView : UIView {
         timer?.resume()
     }
     
+    func resumeWhenEnterForeGround(maxLeaveTime : TimeInterval! ) -> Bool {
+        let date = Date()
+        let timeInterval = date.timeIntervalSince(starTime!)
+        if timeInterval - countDownTimeInterval + remiandCountDown - maxLeaveTime > 0 {
+            return false
+        }
+        
+        if timeInterval > (countDownTimeInterval - remiandCountDown) {
+            remiandCountDown = countDownTimeInterval - timeInterval
+        }
+        self.showLabelWithRemindCountDown(remindTime: remiandCountDown)
+        timer?.resume()
+        return true
+    }
+    
     func cancelCountDown() {
         timer?.cancel()
-        timer = nil
     }
     
     //
     func finishCountDown() -> Void {
         timer?.cancel()
-        timer = nil
         
         if (self.finishCountDownClosure != nil) {
             self.finishCountDownClosure!()
+            self.finishCountDownClosure = nil
         }
     }
     
+    deinit {
+        
+        print("deinit")
+    }
 }

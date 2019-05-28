@@ -28,7 +28,7 @@ class TomatoViewController : UIViewController {
     private var lightBtn : UIButton!   //常亮按钮
     
     private var tomatoModel : Dictionary<String, Any>!
-    private var alertVC : UIAlertController?
+    private weak var alertVC : UIAlertController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +58,14 @@ class TomatoViewController : UIViewController {
                                                object: nil)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.countDonwView.cancelCountDown()
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.countDonwView.finishCountDown()
+//        self.countDonwView.cancelCountDown()
     }
     
     func initUI() {
@@ -119,14 +124,14 @@ class TomatoViewController : UIViewController {
     func finishCountDonw() -> Void {
         print("has finished countDown")
         //已经结束， 提示用户， 开始休息的番茄钟
-        
+
         alertVC?.dismiss(animated: false, completion: nil)
         alertVC = nil
-        
-        
+
+
         //显示继续页面
-        
-        showReStarAlert()
+
+        self.showReStarAlert()
         
 //        countDonwView.starCountDown(countDownTimeInterval: countDonwTime)
 //
@@ -168,7 +173,21 @@ class TomatoViewController : UIViewController {
     //判断进入后台的时间多久，超出则提示失败
     func enterForeGround() -> Void {
         //判断进入后台多久, 暂定5s
-        countDonwView.resumeWhenEnterForeGround()
+//        countDonwView.resumeWhenEnterForeGround()
+        if !countDonwView.resumeWhenEnterForeGround(maxLeaveTime: 5) {
+            //展示
+            weak var weakSelf = self
+            let confirmAction = UIAlertAction.init(title: "确定",
+                                                   style: UIAlertActionStyle.default,
+                                                   handler: ({ (action) in
+                                                    weakSelf?.navigationController?.popViewController(animated: true)
+                                                   }))
+            let alert = UIAlertController.init(title: "",
+                                               message: "退到后台超时，任务失败",
+                                               preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(confirmAction)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     //关闭当前页面
@@ -179,10 +198,11 @@ class TomatoViewController : UIViewController {
             return
         }
         
+        weak var weakSelf = self
         let confirmAction = UIAlertAction.init(title: "确定",
                                                style: UIAlertActionStyle.default,
                                                handler: ({ (action) in
-                                                    self.navigationController?.popViewController(animated: true)
+                                                    weakSelf?.navigationController?.popViewController(animated: true)
                                                }))
         let cancelAction = UIAlertAction.init(title: "取消",
                                               style: UIAlertActionStyle.default,
@@ -205,15 +225,16 @@ class TomatoViewController : UIViewController {
 //            return
 //        }
         
+        weak var weakSelf = self
         let confirmAction = UIAlertAction.init(title: "退出",
                                                style: UIAlertActionStyle.default,
                                                handler: ({ (action) in
-                                                self.navigationController?.popViewController(animated: true)
+                                                weakSelf?.navigationController?.popViewController(animated: true)
                                                }))
         let cancelAction = UIAlertAction.init(title: "继续",
                                               style: UIAlertActionStyle.default,
                                               handler: ({(action)in
-                                                self.countDonwView.starCountDown(countDownTimeInterval: self.countDonwTime)
+                                                weakSelf?.countDonwView.starCountDown(countDownTimeInterval: weakSelf?.countDonwTime ?? 0)
                                               }))
         let alert = UIAlertController.init(title: "",
                                          message: "恭喜完成任务，是否继续",
@@ -238,7 +259,8 @@ class TomatoViewController : UIViewController {
     
     deinit {
         //
-        
+        NotificationCenter.default.removeObserver(self)
+//        print("deinit")
     }
 }
 

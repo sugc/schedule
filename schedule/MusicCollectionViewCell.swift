@@ -74,7 +74,7 @@ class MusicCollectionViewCell : UICollectionViewCell {
         maskImageView.layer.masksToBounds = true
         maskImageView.alpha = 0.3
         maskImageView.isHidden = true
-        maskImageView.backgroundColor = UIColor.blue
+        maskImageView.backgroundColor = UIColor.init(red: 100 / 255.0, green: 254 / 255.0, blue: 253 / 255.0, alpha: 1)
         
         //计算
         let imgSize = size  / pow(2, 0.5)

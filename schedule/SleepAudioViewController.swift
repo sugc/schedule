@@ -75,6 +75,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         for i in 0...2 {
             let frame = CGRect.init(x: space + (imgViewSize + space) * CGFloat(i), y: 10, width: imgViewSize, height: imgViewSize)
             let imageView = UIImageView.init(frame: frame)
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
             playerView.addSubview(imageView)
             imageViews.append(imageView)
         }
