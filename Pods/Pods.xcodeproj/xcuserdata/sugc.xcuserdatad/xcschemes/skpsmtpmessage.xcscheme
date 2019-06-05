@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0586F36184EB50BB8788B16EE2F21C2"
+               BlueprintIdentifier = "4A6E63B73891332D96D09DFB9CA9EAA5"
+               BuildableName = "skpsmtpmessage.framework"
                BlueprintName = "skpsmtpmessage"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "skpsmtpmessage.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

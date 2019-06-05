@@ -11,10 +11,10 @@ PODS:
   - FirebaseAnalytics (4.0.4):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
   - FirebaseCore (4.0.8):
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
   - FirebaseInstanceID (2.0.4)
   - FMDB (2.7.2):
@@ -22,7 +22,7 @@ PODS:
   - FMDB/standard (2.7.2)
   - Google-Mobile-Ads-SDK (7.24.1)
   - GoogleToolboxForMac/Defines (2.1.3)
-  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - MBProgressHUD (1.0.0)
   - nanopb (0.3.8):
@@ -45,27 +45,11 @@ DEPENDENCIES:
   - MBProgressHUD
   - SDWebImage
   - skpsmtpmessage
-  - WZYCalendar (from `/Users/sugc/WZYCalendar/WZYCalendar.podspec`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Crashlytics
-    - Fabric
-    - Firebase
-    - FirebaseAnalytics
-    - FirebaseCore
-    - FirebaseInstanceID
-    - FMDB
-    - Google-Mobile-Ads-SDK
-    - GoogleToolboxForMac
-    - MBProgressHUD
-    - nanopb
-    - SDWebImage
-    - skpsmtpmessage
+  - WZYCalendar (from `../WZYCalendar/WZYCalendar.podspec`)
 
 EXTERNAL SOURCES:
   WZYCalendar:
-    :path: "/Users/sugc/WZYCalendar/WZYCalendar.podspec"
+    :path: ../WZYCalendar/WZYCalendar.podspec
 
 SPEC CHECKSUMS:
   Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
@@ -83,6 +67,6 @@ SPEC CHECKSUMS:
   skpsmtpmessage: f6e913380c784dd8d4a9f83c8790a302445a5e05
   WZYCalendar: c0d2f4cc57e4d871b7482230b83de7beab0bd724
 
-PODFILE CHECKSUM: a7638deb3be2727a0faa880682277a5f2c236503
+PODFILE CHECKSUM: d5585631ca4d3bc1d9033507f6d7f09fe7636991
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.3.1

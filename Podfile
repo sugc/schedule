@@ -10,7 +10,7 @@ pod 'Crashlytics'
 #pod 'ReactiveCocoa', '~>6.0'
 pod 'MBProgressHUD'
 #pod 'libWeChatSDK', '~> 1.7.1'
-pod 'WZYCalendar', :path => '/Users/sugc/WZYCalendar/WZYCalendar.podspec'
+pod 'WZYCalendar', :path => '../WZYCalendar/WZYCalendar.podspec'
 pod 'skpsmtpmessage'
 pod 'SDWebImage'
 
