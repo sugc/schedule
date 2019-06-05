@@ -31,16 +31,16 @@ class CalendarViewController : UIViewController {
                                           width: btnW,
                                           height: btnW)
         settingBtn = UIButton.init(frame: settingBtnFrame)
-        settingBtn.addTarget(self, action: #selector(goSetting), for: UIControlEvents.touchUpInside)
-        settingBtn.setImage(UIImage.init(named: "icon_setting_none"), for: UIControlState.normal)
+        settingBtn.addTarget(self, action: #selector(goSetting), for: UIControl.Event.touchUpInside)
+        settingBtn.setImage(UIImage.init(named: "icon_setting_none"), for: UIControl.State.normal)
         
         let addBtnFrame = CGRect.init(x: ScreenWidth - 20 - btnW,
                                       y: iPhoneXSafeDistanceTop + (navigatorH - btnW) / 2.0,
                                       width: btnW,
                                       height: btnW)
         addBtn = UIButton.init(frame: addBtnFrame)
-        addBtn.addTarget(self, action: #selector(addNewEvent), for: UIControlEvents.touchUpInside)
-        addBtn.setImage(UIImage.init(named: "icon_add"), for: UIControlState.normal)
+        addBtn.addTarget(self, action: #selector(addNewEvent), for: UIControl.Event.touchUpInside)
+        addBtn.setImage(UIImage.init(named: "icon_add"), for: UIControl.State.normal)
         
         let width = ScreenWidth
         let origin = CGPoint.init(x: 0, y: iPhoneXSafeDistanceTop + navigatorH)
@@ -91,7 +91,7 @@ class CalendarViewController : UIViewController {
     }
     
     //添加新的事件
-    func addNewEvent() -> Void {
+    @objc func addNewEvent() -> Void {
         
         let story = UIStoryboard.init(name: "Reminder", bundle: nil)
         let vc = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
@@ -102,7 +102,7 @@ class CalendarViewController : UIViewController {
     }
     
     //去设置
-    func goSetting() -> Void {
+    @objc func goSetting() -> Void {
         
     }
     

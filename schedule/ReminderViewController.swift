@@ -25,28 +25,28 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        datePicker.datePickerMode = UIDatePickerMode.dateAndTime;
+        datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime;
         hideKeyBoardView.delegate = self;
         self.navigationController?.navigationBar.isHidden = true
         self.addNotification()
         self.reset()
         swipeGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(swipeToLeft(gesture:)))
-        swipeGesture.direction = UISwipeGestureRecognizerDirection.left
+        swipeGesture.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeGesture)
         
         
     }
     
     func addNotification() -> Void {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIApplication.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: UIApplication.keyboardDidHideNotification, object: nil)
     }
     
-    func keyboardShow() {
+    @objc func keyboardShow() {
         isKeyboardShow = true
     }
     
-    func keyboardHide() {
+    @objc func keyboardHide() {
         isKeyboardShow = false
     }
     
@@ -130,7 +130,7 @@ class ReminderViewController : UIViewController, ToucesViewDelegate {
 
     }
     
-    func swipeToLeft(gesture:UISwipeGestureRecognizer) {
+    @objc func swipeToLeft(gesture:UISwipeGestureRecognizer) {
         let story = UIStoryboard.init(name: "Reminder", bundle: nil)
         let remindListVC = story.instantiateViewController(withIdentifier: "RemindListViewController") as! RemindListViewController
         self.navigationController?.pushViewController(remindListVC, animated: true)

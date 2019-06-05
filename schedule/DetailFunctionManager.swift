@@ -37,7 +37,7 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell : DetailFuncTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "deatilFuncCell") as? DetailFuncTableViewCell
         if cell == nil {
-            cell = DetailFuncTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "deatilFuncCell")
+            cell = DetailFuncTableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: "deatilFuncCell")
         }
         
         if configArray.count > indexPath.section {

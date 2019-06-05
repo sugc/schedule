@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 func simpleCancelAler(title:String?, message:String?) ->UIAlertController!{
-    let alterView = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-    let action = UIAlertAction.init(title: "确定", style: UIAlertActionStyle.cancel) { (action) in
+    let alterView = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+    let action = UIAlertAction.init(title: "确定", style: UIAlertAction.Style.cancel) { (action) in
         
     }
     alterView.addAction(action)
@@ -19,8 +19,8 @@ func simpleCancelAler(title:String?, message:String?) ->UIAlertController!{
 }
 
 func simpleCancelAler(title:String?, message:String?, handler:((UIAlertAction)->Void)?) ->UIAlertController!{
-    let alterView = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-    let action = UIAlertAction.init(title: "确定", style: UIAlertActionStyle.cancel, handler:handler)
+    let alterView = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+    let action = UIAlertAction.init(title: "确定", style: UIAlertAction.Style.cancel, handler:handler)
     
     alterView.addAction(action)
     return alterView

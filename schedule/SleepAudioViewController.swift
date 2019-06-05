@@ -41,7 +41,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         let layout = UICollectionViewFlowLayout()
 
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
-        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         layout.itemSize = CGSize.init(width: 60, height: 44)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
@@ -67,7 +67,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         playerView.layer.cornerRadius = 5
         playerView.layer.masksToBounds = true
         playerView.image = UIImage.init(named: "backGroud_sleep_music")
-        playerView.contentMode = UIViewContentMode.scaleAspectFill
+        playerView.contentMode = UIView.ContentMode.scaleAspectFill
         
         //播放视图
         let space : CGFloat = 15
@@ -75,7 +75,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         for i in 0...2 {
             let frame = CGRect.init(x: space + (imgViewSize + space) * CGFloat(i), y: 10, width: imgViewSize, height: imgViewSize)
             let imageView = UIImageView.init(frame: frame)
-            imageView.contentMode = UIViewContentMode.scaleAspectFit
+            imageView.contentMode = UIView.ContentMode.scaleAspectFit
             playerView.addSubview(imageView)
             imageViews.append(imageView)
         }
@@ -86,7 +86,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
                                        height: 30)
         playBtn = UIButton.init(frame: playBtnFrame)
         playBtn.showsTouchWhenHighlighted = false
-        playBtn.addTarget(self, action: #selector(playMusic), for: UIControlEvents.touchUpInside)
+        playBtn.addTarget(self, action: #selector(playMusic), for: UIControl.Event.touchUpInside)
         playerView.addSubview(playBtn)
         refreshPlayBtn()
         
@@ -119,7 +119,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         
         for i in 0...(musicCollectionViewManager.numberOfCollection - 1) {
             let collectionViewLayout = UICollectionViewFlowLayout()
-            collectionViewLayout.scrollDirection = UICollectionViewScrollDirection.vertical
+            collectionViewLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
             
             collectionViewLayout.itemSize = CGSize(width: ScreenWidth / 4.0, height: ScreenWidth / 4.0)
             collectionViewLayout.minimumLineSpacing = 0
@@ -145,7 +145,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         }
     }
     
-    func playMusic() {
+    @objc func playMusic() {
         //播放音乐
         if AudioPlayer.isPlaying {
             AudioPlayer.pause()
@@ -158,7 +158,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
     func refreshPlayBtn() {
         playBtn.isHidden = !AudioPlayer.hasPlayItems
         let imgName = AudioPlayer.isPlaying ? "icon_pause" : "icon_play"
-        playBtn.setBackgroundImage(UIImage.init(named: imgName), for: UIControlState.normal)
+        playBtn.setBackgroundImage(UIImage.init(named: imgName), for: UIControl.State.normal)
     }
     
     func didSelectAtIndex(index : NSInteger)->Void {

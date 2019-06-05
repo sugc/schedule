@@ -45,7 +45,7 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
         var cell = tableView.dequeueReusableCell(withIdentifier: "listViewCell")
         
         if cell == nil {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.value1, reuseIdentifier: "listViewCell")
+            cell = UITableViewCell.init(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "listViewCell")
         }
         
         let evetModel = dataArray[indexPath.row]
@@ -59,7 +59,7 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let deleteAction = UITableViewRowAction.init(style: UITableViewRowActionStyle.default, title: "删除") { (action, path) in
+        let deleteAction = UITableViewRowAction.init(style: UITableViewRowAction.Style.default, title: "删除") { (action, path) in
             //删除一个通知
             self.removeReminderInIndexPath(path: path)
         }
@@ -71,16 +71,16 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
         let eventModel = dataArray[path.row];
         if eventModel.remindDate > Date().timeIntervalSince1970 {
             //未提醒过的事件，显示提醒
-            let okAction = UIAlertAction.init(title: "删除", style: UIAlertActionStyle.default, handler: { (action) in
+            let okAction = UIAlertAction.init(title: "删除", style: UIAlertAction.Style.default, handler: { (action) in
                 let model =  self.deleteReminderInIndexPath(path: path)
                 removeNotification(notificationInfo: model)
                 
             })
-            let cancelAction = UIAlertAction.init(title: "取消", style: UIAlertActionStyle.cancel, handler: { (action) in
+            let cancelAction = UIAlertAction.init(title: "取消", style: UIAlertAction.Style.cancel, handler: { (action) in
                 
             })
             
-            let alertController = UIAlertController.init(title: "删除后将不提醒该事件，是否确定删除", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController.init(title: "删除后将不提醒该事件，是否确定删除", message: "", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(okAction)
             alertController.addAction(cancelAction)
             
@@ -94,7 +94,7 @@ class RemindTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
     func deleteReminderInIndexPath(path : IndexPath) -> EventModel {
         let model = dataArray.remove(at: path.row)
         DBManager.singleTon().deleteEvent(eventModel: model)
-        tableView?.deleteRows(at: [path], with: UITableViewRowAnimation.top)
+        tableView?.deleteRows(at: [path], with: UITableView.RowAnimation.top)
         return model;
     }
 }

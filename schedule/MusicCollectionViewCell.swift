@@ -83,7 +83,7 @@ class MusicCollectionViewCell : UICollectionViewCell {
                               width: imgSize,
                               height: imgSize)
         imageView = UIImageView(frame: imgFrame)
-        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
         var labelH = self.height - imageView.bottom
         if labelH > 15 {
             labelH = 15;

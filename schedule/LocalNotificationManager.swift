@@ -44,6 +44,7 @@ func addLocalNotification(title:String!, fireDate:Date!) -> Void {
     notification.soundName = "test.caf"
     notification.alertBody = title
     notification.alertAction = "ds"
+    
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd HH"
     let dateStr = dateFormatter.string(from: fireDate)

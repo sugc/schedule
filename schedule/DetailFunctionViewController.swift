@@ -26,8 +26,8 @@ class DetailFunctionViewController : UIViewController {
                                     width: ScreenWidth,
                                     height: ScreenHeight - iPhoneXSafeDistanceTop -
                                         self.tabBarController!.tabBar.height)
-        tableView = UITableView.init(frame: tableViewFrame, style: UITableViewStyle.grouped)
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        tableView = UITableView.init(frame: tableViewFrame, style: UITableView.Style.grouped)
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         tableView.register(DetailFuncTableViewCell.classForCoder(), forCellReuseIdentifier: "deatilFuncCell")
         tableView.delegate = tableViewManager
         tableView.dataSource = tableViewManager

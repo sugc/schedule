@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var navigationViewController : UINavigationController!
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         navigationViewController = UINavigationController.init()
         let tab = UITabBarController.init()
@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         
         //判断是否在前台
-        if application.applicationState == UIApplicationState.active {
+        if application.applicationState == UIApplication.State.active {
             
         }
         //

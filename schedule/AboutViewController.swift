@@ -16,11 +16,11 @@ class AboutViewController : UIViewController {
                                                 y: iPhoneXSafeDistanceTop,
                                                 width: 40,
                                                 height: 40 ))
-        leftButton.setTitle("返回", for: UIControlState.normal)
+        leftButton.setTitle("返回", for: UIControl.State.normal)
         leftButton.addTarget(self,
                              action: #selector(goBack) ,
-                             for: UIControlEvents.touchUpInside)
-        leftButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+                             for: UIControl.Event.touchUpInside)
+        leftButton.setTitleColor(UIColor.black, for: UIControl.State.normal)
         self.view.addSubview(leftButton)
         
         
@@ -48,7 +48,7 @@ class AboutViewController : UIViewController {
         
     }
     
-    func goBack() {
+    @objc func goBack() {
         _ = self.navigationController?.popViewController(animated: true)
     }
     

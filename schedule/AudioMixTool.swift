@@ -51,10 +51,10 @@ class AudioMixTool : NSObject {
         
         
         for asset in assets {
-            let track = composition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: kCMPersistentTrackID_Invalid)
-            let duration = CMTimeRangeMake(kCMTimeZero, asset.duration)
+            let track = composition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: kCMPersistentTrackID_Invalid)
+            let duration = CMTimeRangeMake(start: CMTime.zero, duration: asset.duration)
             do {
-                try track.insertTimeRange(duration, of: asset.tracks(withMediaType: AVMediaTypeAudio)[0], at: kCMTimeZero)
+                try track?.insertTimeRange(duration, of: asset.tracks(withMediaType: AVMediaType.audio)[0], at: CMTime.zero)
             }catch {
                 //
                 print("track error")
@@ -73,8 +73,8 @@ class AudioMixTool : NSObject {
         
         let exporter = AVAssetExportSession.init(asset: composition, presetName: AVAssetExportPresetAppleM4A)!
         exporter.outputURL = URL.init(fileURLWithPath: outputPath)
-        exporter.outputFileType = AVFileTypeAppleM4A
-        exporter.timeRange = CMTimeRange.init(start: kCMTimeZero, end: timeRange)
+        exporter.outputFileType = AVFileType.m4a
+        exporter.timeRange = CMTimeRange.init(start: CMTime.zero, end: timeRange)
         exporter.exportAsynchronously {
             completion(exporter.outputURL!)
         }

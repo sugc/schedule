@@ -50,11 +50,11 @@ class TomatoViewController : UIViewController {
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(enterBackGround),
-                                               name: NSNotification.Name.UIApplicationDidEnterBackground,
+                                               name:UIApplication.didEnterBackgroundNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(enterForeGround),
-                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
+                                               name: UIApplication.willEnterForegroundNotification,
                                                object: nil)
     }
     
@@ -98,21 +98,21 @@ class TomatoViewController : UIViewController {
                                      width: lingtFramS,
                                      height: lingtFramS)
         lightBtn = UIButton.init(frame: lightFrame)
-        lightBtn.setImage(UIImage.init(named:"icon_light_normal"), for: UIControlState.normal)
-        lightBtn.setImage(UIImage.init(named: "icon_light_selected"), for: UIControlState.selected)
+        lightBtn.setImage(UIImage.init(named:"icon_light_normal"), for: UIControl.State.normal)
+        lightBtn.setImage(UIImage.init(named: "icon_light_selected"), for: UIControl.State.selected)
         lightBtn.addTarget(self,
                            action: #selector(clickLightBtn),
-                           for: UIControlEvents.touchUpInside)
+                           for: UIControl.Event.touchUpInside)
         
         let cancelFrame = CGRect.init(x: ScreenWidth / 2.0 - 20 - lingtFramS,
                                       y: ScreenHeight - lingtFramS - 40 - iPhoneXSafeDistanceBottom,
                                       width: lingtFramS,
                                       height: lingtFramS)
         cancelBtn = UIButton.init(frame: cancelFrame)
-        cancelBtn.setImage(UIImage.init(named: "icon_cancel"), for: UIControlState.normal)
+        cancelBtn.setImage(UIImage.init(named: "icon_cancel"), for: UIControl.State.normal)
         cancelBtn.addTarget(self,
                             action: #selector(closePage),
-                            for: UIControlEvents.touchUpInside)
+                            for: UIControl.Event.touchUpInside)
         
         self.view.addSubview(mottoTextView)
         self.view.addSubview(countDonwView)
@@ -154,7 +154,7 @@ class TomatoViewController : UIViewController {
     }
     
     //进入后台，不停止计时， 通知提示
-    func enterBackGround() -> Void {
+    @objc func enterBackGround() -> Void {
         countDonwView.pause()
         
         //是否需要后台保活? 默认开启
@@ -171,27 +171,27 @@ class TomatoViewController : UIViewController {
     }
     
     //判断进入后台的时间多久，超出则提示失败
-    func enterForeGround() -> Void {
+    @objc func enterForeGround() -> Void {
         //判断进入后台多久, 暂定5s
 //        countDonwView.resumeWhenEnterForeGround()
         if !countDonwView.resumeWhenEnterForeGround(maxLeaveTime: 5) {
             //展示
             weak var weakSelf = self
             let confirmAction = UIAlertAction.init(title: "确定",
-                                                   style: UIAlertActionStyle.default,
+                                                   style: UIAlertAction.Style.default,
                                                    handler: ({ (action) in
                                                     weakSelf?.navigationController?.popViewController(animated: true)
                                                    }))
             let alert = UIAlertController.init(title: "",
                                                message: "退到后台超时，任务失败",
-                                               preferredStyle: UIAlertControllerStyle.alert)
+                                               preferredStyle: UIAlertController.Style.alert)
             alert.addAction(confirmAction)
             self.present(alert, animated: true, completion: nil)
         }
     }
     
     //关闭当前页面
-    func closePage() -> Void {
+    @objc func closePage() -> Void {
         //判断当前时间
         if isCurrentRestTime || countDonwView.remiandTimeInterval <= 5 {
             self.navigationController?.popViewController(animated: true)
@@ -200,18 +200,18 @@ class TomatoViewController : UIViewController {
         
         weak var weakSelf = self
         let confirmAction = UIAlertAction.init(title: "确定",
-                                               style: UIAlertActionStyle.default,
+                                               style: UIAlertAction.Style.default,
                                                handler: ({ (action) in
                                                     weakSelf?.navigationController?.popViewController(animated: true)
                                                }))
         let cancelAction = UIAlertAction.init(title: "取消",
-                                              style: UIAlertActionStyle.default,
+                                              style: UIAlertAction.Style.default,
                                               handler: ({(action)in
                                                 
                                               }))
         alertVC = UIAlertController.init(title: "",
                                              message: "退出当前页面视为任务失败，是否确定退出",
-                                             preferredStyle: UIAlertControllerStyle.alert)
+                                             preferredStyle: UIAlertController.Style.alert)
         alertVC!.addAction(cancelAction)
         alertVC!.addAction(confirmAction)
         self.present(alertVC!, animated: true, completion: nil)
@@ -227,18 +227,18 @@ class TomatoViewController : UIViewController {
         
         weak var weakSelf = self
         let confirmAction = UIAlertAction.init(title: "退出",
-                                               style: UIAlertActionStyle.default,
+                                               style: UIAlertAction.Style.default,
                                                handler: ({ (action) in
                                                 weakSelf?.navigationController?.popViewController(animated: true)
                                                }))
         let cancelAction = UIAlertAction.init(title: "继续",
-                                              style: UIAlertActionStyle.default,
+                                              style: UIAlertAction.Style.default,
                                               handler: ({(action)in
                                                 weakSelf?.countDonwView.starCountDown(countDownTimeInterval: weakSelf?.countDonwTime ?? 0)
                                               }))
         let alert = UIAlertController.init(title: "",
                                          message: "恭喜完成任务，是否继续",
-                                         preferredStyle: UIAlertControllerStyle.alert)
+                                         preferredStyle: UIAlertController.Style.alert)
         alert.addAction(cancelAction)
         alert.addAction(confirmAction)
         self.present(alert, animated: true, completion: nil)
@@ -246,7 +246,7 @@ class TomatoViewController : UIViewController {
     }
     
     //点击屏幕常亮按钮
-    func clickLightBtn() {
+    @objc func clickLightBtn() {
         
         lightBtn.isSelected = !lightBtn.isSelected
         var message = "已经关闭屏幕常亮"
