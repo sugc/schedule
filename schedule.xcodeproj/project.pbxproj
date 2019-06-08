@@ -39,6 +39,7 @@
 		89C3664620BA7E960077E0C7 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3664520BA7E960077E0C7 /* ReminderModel.swift */; };
 		89FE4B2422A823F2005FCA63 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2222A823F2005FCA63 /* UIView+Utils.swift */; };
 		89FE4B2522A823F2005FCA63 /* UIButton+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2322A823F2005FCA63 /* UIButton+image.swift */; };
+		89FE4B2722AB949A005FCA63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89FE4B2622AB9499005FCA63 /* GoogleService-Info.plist */; };
 		8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */; };
 		8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D81EFA874D003E6705 /* CalendarManager.swift */; };
 		8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87DA1EFA8777003E6705 /* LocalNotificationManager.swift */; };
@@ -105,6 +106,7 @@
 		89C3664520BA7E960077E0C7 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		89FE4B2222A823F2005FCA63 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		89FE4B2322A823F2005FCA63 /* UIButton+image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+image.swift"; sourceTree = "<group>"; };
+		89FE4B2622AB9499005FCA63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8A0816BB1EF4137F00A88820 /* schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schedule.entitlements; sourceTree = "<group>"; };
 		8A0816BC1EF4176700A88820 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				8909ABDF20DFD79000F13AE9 /* schedule-Bridging-Header.h */,
+				89FE4B2622AB9499005FCA63 /* GoogleService-Info.plist */,
 				8A5D972A1EF29FAB004019C9 /* schedule */,
 				8A5D973F1EF29FAB004019C9 /* scheduleTests */,
 				8A5D974A1EF29FAB004019C9 /* scheduleUITests */,
@@ -329,6 +332,7 @@
 				8A5D97261EF29FAB004019C9 /* Resources */,
 				466508F3999045E185A76229 /* [CP] Embed Pods Frameworks */,
 				8D8B34C5DB9F52D29CC39893 /* [CP] Copy Pods Resources */,
+				89FE4B2822AB977B005FCA63 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -444,6 +448,7 @@
 				8A5D97361EF29FAB004019C9 /* LaunchScreen.storyboard in Resources */,
 				8A5D97331EF29FAB004019C9 /* Assets.xcassets in Resources */,
 				8A5D97311EF29FAB004019C9 /* Main.storyboard in Resources */,
+				89FE4B2722AB949A005FCA63 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +516,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		89FE4B2822AB977B005FCA63 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 		8D8B34C5DB9F52D29CC39893 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -745,6 +768,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 4D8QBLQTY5;
 				INFOPLIST_FILE = schedule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -42,6 +42,12 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.layout()
+        
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func layout() {
