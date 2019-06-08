@@ -9,6 +9,16 @@
 import Foundation
 import SDWebImage
 
+enum TimeMode : NSInteger{
+//    typealias RawValue = Int
+    
+    case forever = 99999,
+        halfAnHour = 1,
+        anHour = 2
+}
+
+
+
 //模仿蜗牛睡眠？
 class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicCollectionDelegate, UIScrollViewDelegate {
     
@@ -20,6 +30,11 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
     private var topBarManager : TopBarManager! = TopBarManager()
     private var imageViews : Array<UIImageView> = Array()
     private var playBtn : UIButton!
+    private var timeBtn : UIButton!
+    private var timeMode : TimeMode = TimeMode.forever
+    private var timer : Timer?
+    
+    private var timerCount : Int = 0
     
     private var musicCollectionViewManager : MusicCollectionViewManager!
     
@@ -80,7 +95,16 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
             imageViews.append(imageView)
         }
         
-        let playBtnFrame = CGRect.init(x: playerFrame.size.width - 30 - 20,
+        let timeBtnFrame = CGRect.init(x: playerFrame.size.width - 30 - 20,
+                                       y: 15,
+                                       width: 30,
+                                       height: 30)
+        timeBtn = UIButton.init(frame: timeBtnFrame)
+        timeBtn.showsTouchWhenHighlighted = false
+        timeBtn.addTarget(self, action: #selector(changeTimeMode), for: UIControl.Event.touchUpInside)
+        playerView.addSubview(timeBtn)
+        
+        let playBtnFrame = CGRect.init(x: timeBtn.left - 30 - 10,
                                        y: 15,
                                        width: 30,
                                        height: 30)
@@ -149,16 +173,74 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         //播放音乐
         if AudioPlayer.isPlaying {
             AudioPlayer.pause()
+            
         }else {
              AudioPlayer.resume()
         }
         refreshPlayBtn()
+        starTimerIfNeed()
+    }
+    
+    @objc func changeTimeMode() {
+        
+        switch timeMode {
+        case .forever:
+        timeMode = .halfAnHour
+        break
+        case .halfAnHour:
+        timeMode = .anHour
+        break;
+        case .anHour:
+        timeMode = .forever
+        break
+        default:
+        break
+        }
+        refreshPlayBtn()
+        starTimerIfNeed()
+    }
+    
+    func starTimerIfNeed() {
+        timer?.invalidate()
+        timerCount  = 0
+        timer = nil
+        if timeMode != .forever && AudioPlayer.isPlaying {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerStopMusic), userInfo: nil, repeats: true)
+        }
+    }
+
+    @objc func timerStopMusic() {
+        timerCount += 1
+        if timerCount > timeMode.rawValue * 60 {
+            AudioPlayer.pause()
+            refreshPlayBtn()
+            timer?.invalidate()
+            timer = nil
+        }
     }
     
     func refreshPlayBtn() {
         playBtn.isHidden = !AudioPlayer.hasPlayItems
+        timeBtn.isHidden = !AudioPlayer.hasPlayItems
         let imgName = AudioPlayer.isPlaying ? "icon_pause" : "icon_play"
         playBtn.setBackgroundImage(UIImage.init(named: imgName), for: UIControl.State.normal)
+        
+        var timeBtnImgName = ""
+        switch timeMode {
+
+        case .forever:
+            timeBtnImgName = "icon_time_forever"
+            break
+        case .halfAnHour:
+            timeBtnImgName = "icon_time_half_hour"
+            break;
+        case .anHour:
+            timeBtnImgName = "icon_time_an_hour"
+            break
+        default:
+            break
+        }
+        timeBtn.setBackgroundImage(UIImage.init(named: timeBtnImgName), for: UIControl.State.normal)
     }
     
     func didSelectAtIndex(index : NSInteger)->Void {
