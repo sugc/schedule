@@ -331,7 +331,6 @@
 				8A5D97251EF29FAB004019C9 /* Frameworks */,
 				8A5D97261EF29FAB004019C9 /* Resources */,
 				466508F3999045E185A76229 /* [CP] Embed Pods Frameworks */,
-				8D8B34C5DB9F52D29CC39893 /* [CP] Copy Pods Resources */,
 				89FE4B2822AB977B005FCA63 /* ShellScript */,
 			);
 			buildRules = (
@@ -475,7 +474,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -496,7 +495,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-schedule/Pods-schedule-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5B0BA9AEE0AE5F28A798FB7A /* [CP] Check Pods Manifest.lock */ = {
@@ -534,25 +533,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
-		};
-		8D8B34C5DB9F52D29CC39893 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-schedule/Pods-schedule-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 

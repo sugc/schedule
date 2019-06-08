@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AC472BBD0D9C7039BC00CBDE1EC859F"
-               BuildableName = "skpsmtpmessage.framework"
-               BlueprintName = "skpsmtpmessage"
+               BlueprintIdentifier = "FEA3B3A570634836C0457F3D7CEF1699"
+               BuildableName = "Google-Mobile-Ads-SDK"
+               BlueprintName = "Google-Mobile-Ads-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

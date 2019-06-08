@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E2E083004515FE250C6504E5A6C50FB"
+               BlueprintIdentifier = "5899959CCF0C8E42D704D113728E27FF"
                BuildableName = "WZYCalendar.framework"
                BlueprintName = "WZYCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">

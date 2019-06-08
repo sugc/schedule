@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-9435427819697575~6435656153")
         
         navigationViewController = UINavigationController.init()
         let tab = UITabBarController.init()
@@ -26,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationViewController.navigationBar.isHidden = true
         navigationViewController.interactivePopGestureRecognizer?.isEnabled = false
         //开始root
-        let story = UIStoryboard.init(name: "Reminder", bundle: nil)
+//        let story = UIStoryboard.init(name: "Reminder", bundle: nil)
 //        let homeView = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
 //        nav.pushViewController(homeView, animated: false)
 //        homeView.title = "提醒"

@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AC472BBD0D9C7039BC00CBDE1EC859F"
-               BuildableName = "skpsmtpmessage.framework"
-               BlueprintName = "skpsmtpmessage"
+               BlueprintIdentifier = "072CEA044D2EF26F03496D5996BBF59F"
+               BuildableName = "Firebase"
+               BlueprintName = "Firebase"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
