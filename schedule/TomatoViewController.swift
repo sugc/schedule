@@ -33,6 +33,7 @@ class TomatoViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        (UIApplication.shared.delegate as! AppDelegate).navigationViewController.interactivePopGestureRecognizer?.isEnabled = false
         self.initUI()
         
         //读取配置文件， 获取番茄时钟的时长，短休息时长，间隔几次有一个长休息，长休息时长

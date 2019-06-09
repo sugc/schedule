@@ -96,9 +96,13 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                     //去生日提醒
                 }
                 
+                if action == "goDonate" {
+                    goDonate()
+                }
+                
                 if action == "goSettings" {
                     //去基本设置
-                   
+                   goSettings()
                 }
                 
                 if action == "goSuggestion" {
@@ -117,6 +121,7 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
         //
         let tomatoVC = TomatoViewController()
         (UIApplication.shared.delegate as! AppDelegate).navigationViewController.pushViewController(tomatoVC, animated: true)
+        
     }
     
     func goBorthDay() {
@@ -125,6 +130,13 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
     
     func goSettings() {
         //
+        
+    }
+    
+    //支持作者
+    func goDonate () {
+        let donateVC = DonateViewController()
+        (UIApplication.shared.delegate as! AppDelegate).navigationViewController.pushViewController(donateVC, animated: true)
     }
     
     func goSuggestion() {
@@ -150,6 +162,7 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                         "action" : "goClock"
                     ],
                     
+
 //                    [
 //                        "title" : "生日提醒",
 //                        "leftImage" : "",
@@ -165,7 +178,7 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
 //                        "type" : "",
 //                        "action" : "goSettings"
 //                    ],
-                    
+                
 //                    [
 //                        "title" : "挑战记录",
 //                        "leftImage" : "",
@@ -193,6 +206,14 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                         "rightImage" : "icon_right_arrow",
                         "type" : "",
                         "action" : "goAbout"
+                    ],
+                    
+                    [
+                        "title" : "支持作者",
+                        "leftImage" : "",
+                        "rightImage" : "icon_right_arrow",
+                        "type" : "",
+                        "action" : "goDonate"
                     ],
                 ]
             ]

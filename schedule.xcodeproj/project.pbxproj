@@ -40,6 +40,10 @@
 		89FE4B2422A823F2005FCA63 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2222A823F2005FCA63 /* UIView+Utils.swift */; };
 		89FE4B2522A823F2005FCA63 /* UIButton+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2322A823F2005FCA63 /* UIButton+image.swift */; };
 		89FE4B2722AB949A005FCA63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89FE4B2622AB9499005FCA63 /* GoogleService-Info.plist */; };
+		89FE4B2A22ACE0DA005FCA63 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2922ACE0DA005FCA63 /* SettingViewController.swift */; };
+		89FE4B2C22ACE3F6005FCA63 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2B22ACE3F6005FCA63 /* DonateViewController.swift */; };
+		89FE4B2F22ACE58A005FCA63 /* SimpleBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2E22ACE58A005FCA63 /* SimpleBackViewController.swift */; };
+		89FE4B3222AD5D14005FCA63 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B3122AD5D14005FCA63 /* TipsView.swift */; };
 		8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */; };
 		8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87D81EFA874D003E6705 /* CalendarManager.swift */; };
 		8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E87DA1EFA8777003E6705 /* LocalNotificationManager.swift */; };
@@ -107,6 +111,10 @@
 		89FE4B2222A823F2005FCA63 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		89FE4B2322A823F2005FCA63 /* UIButton+image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+image.swift"; sourceTree = "<group>"; };
 		89FE4B2622AB9499005FCA63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89FE4B2922ACE0DA005FCA63 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		89FE4B2B22ACE3F6005FCA63 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		89FE4B2E22ACE58A005FCA63 /* SimpleBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBackViewController.swift; sourceTree = "<group>"; };
+		89FE4B3122AD5D14005FCA63 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		8A0816BB1EF4137F00A88820 /* schedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schedule.entitlements; sourceTree = "<group>"; };
 		8A0816BC1EF4176700A88820 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		8A1E87D61EFA86B0003E6705 /* ReminderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 		89B3832A20F2106C0096AD4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89FE4B3022AD5C74005FCA63 /* CommonUtil */,
 				89B3832B20F211920096AD4D /* RemindListViewCell.swift */,
 				8966FCDD214D3C61005F1D8E /* CountDownView.swift */,
 				89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */,
@@ -191,6 +200,22 @@
 				89FE4B2222A823F2005FCA63 /* UIView+Utils.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		89FE4B2D22ACE510005FCA63 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				89FE4B2E22ACE58A005FCA63 /* SimpleBackViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		89FE4B3022AD5C74005FCA63 /* CommonUtil */ = {
+			isa = PBXGroup;
+			children = (
+				89FE4B3122AD5D14005FCA63 /* TipsView.swift */,
+			);
+			path = CommonUtil;
 			sourceTree = "<group>";
 		};
 		8A1E87D31EFA8605003E6705 /* Handler */ = {
@@ -213,6 +238,7 @@
 		8A1E87D41EFA861B003E6705 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				89FE4B2D22ACE510005FCA63 /* Common */,
 				89C3664320BA6E3F0077E0C7 /* ViewController.swift */,
 				898F6B1F229A4E1F00FD855E /* SuggestionViewController.swift */,
 				8A5D972F1EF29FAB004019C9 /* Main.storyboard */,
@@ -224,6 +250,8 @@
 				8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */,
 				8922316121FA237800720A98 /* DetailFunctionViewController.swift */,
 				898F6B21229A507A00FD855E /* AboutViewController.swift */,
+				89FE4B2922ACE0DA005FCA63 /* SettingViewController.swift */,
+				89FE4B2B22ACE3F6005FCA63 /* DonateViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -546,6 +574,8 @@
 				8920F2C3222CAD0A00C537A5 /* AudioPlayer.swift in Sources */,
 				8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */,
 				891AD8882200A6D60005F21B /* TopBarCell.swift in Sources */,
+				89FE4B2A22ACE0DA005FCA63 /* SettingViewController.swift in Sources */,
+				89FE4B3222AD5D14005FCA63 /* TipsView.swift in Sources */,
 				89AA151421EF872C00A095DD /* DesignedUtils.swift in Sources */,
 				89842210221645DF00B0536B /* MusicMaterialManager.swift in Sources */,
 				89B3832C20F211920096AD4D /* RemindListViewCell.swift in Sources */,
@@ -559,6 +589,7 @@
 				89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */,
 				8922316221FA237800720A98 /* DetailFunctionViewController.swift in Sources */,
 				89B3C7EB2214F05400B4A6D1 /* MusicCollectionViewCell.swift in Sources */,
+				89FE4B2C22ACE3F6005FCA63 /* DonateViewController.swift in Sources */,
 				8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */,
 				89C2E5E122494AD500950999 /* AudioMixTool.swift in Sources */,
 				8984221222164AB900B0536B /* MusicMaterialModel.swift in Sources */,
@@ -566,6 +597,7 @@
 				89145FD021F44890006D26E6 /* CalendarViewController.swift in Sources */,
 				893C84CF20DC0D900007337E /* RemindListViewController.swift in Sources */,
 				89145FD721F49A8A006D26E6 /* RemindTableViewManager.swift in Sources */,
+				89FE4B2F22ACE58A005FCA63 /* SimpleBackViewController.swift in Sources */,
 				8966FCDE214D3C61005F1D8E /* CountDownView.swift in Sources */,
 				898F6B22229A507A00FD855E /* AboutViewController.swift in Sources */,
 				8909ABE120DFDFEF00F13AE9 /* DBManager.swift in Sources */,

@@ -30,7 +30,7 @@ class AboutViewController : UIViewController {
                                    height: imgW)
         let imageView = UIImageView.init(frame: imgFrame)
         imageView.layer.cornerRadius = 5
-        imageView.image = UIImage.init(named: "AppIcon")
+        imageView.image = UIImage.init(named: "app_icon")
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
         

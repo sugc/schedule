@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow()
         window?.rootViewController = navigationViewController;
         navigationViewController.navigationBar.isHidden = true
-        navigationViewController.interactivePopGestureRecognizer?.isEnabled = false
         //开始root
 //        let story = UIStoryboard.init(name: "Reminder", bundle: nil)
 //        let homeView = story.instantiateViewController(withIdentifier: "ReminderViewController") as! ReminderViewController
@@ -48,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navigationViewController.viewControllers = [tab]
         tab.viewControllers = [calendarVC,sleepVC, detailVC];
-
+        navigationViewController.interactivePopGestureRecognizer?.isEnabled = false
         addLocalNotification()
         AudioPlayer.initSession()
         return true
