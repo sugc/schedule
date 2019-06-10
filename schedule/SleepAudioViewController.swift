@@ -189,18 +189,28 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
     
     @objc func changeTimeMode() {
         
+        var timeStr : String? = nil
         switch timeMode {
         case .forever:
         timeMode = .halfAnHour
+        timeStr = "30分后自动停止"
         break
         case .halfAnHour:
         timeMode = .anHour
+        timeStr = "60分后自动停止"
         break;
         case .anHour:
         timeMode = .forever
         break
         default:
         break
+        }
+        
+        if timeStr != nil {
+            UnblockTipsView.showUnblockTipsOnView(view: self.view, title: nil, message: timeStr)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                UnblockTipsView.hideUnblockTipsForView(view: self.view)
+            }
         }
         refreshPlayBtn()
         starTimerIfNeed()

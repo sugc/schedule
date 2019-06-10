@@ -10,9 +10,9 @@ import Foundation
 
 class TipsView : UIView {
     
-    private var titleLabel : UILabel?
-    private var messageLabel : UILabel?
-    private var contentView : UIView!
+    var titleLabel : UILabel?
+    var messageLabel : UILabel?
+    var contentView : UIView!
     
     var contentWidth : CGFloat = 120
     var leftSpace : CGFloat = 5
@@ -20,8 +20,6 @@ class TipsView : UIView {
     static func showTipsOnView(view:UIView!, title:String?, message:String?){
         
         let tips = TipsView.init(frame: view.bounds)
-//        tips.titleLabel?.text = title
-//        tips.messageLabel?.text = message
         tips.configWith(title: title, message: message)
         view.addSubview(tips)
         tips.alpha = 0
