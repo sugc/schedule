@@ -35,6 +35,14 @@ class DonateViewController : SimpleBackViewController {
         self.view.addSubview(label)
         self.view.addSubview(copyBtn)
         
+        let adView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adView.left = 0
+        adView.bottom = ScreenHeight - iPhoneXSafeDistanceBottom
+        adView.adUnitID = "ca-app-pub-9435427819697575/5296181912"
+        adView.rootViewController = self
+        self.view.addSubview(adView)
+        adView.load(GADRequest())
+        
     }
     
     
