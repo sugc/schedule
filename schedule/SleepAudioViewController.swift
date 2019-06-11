@@ -13,8 +13,8 @@ enum TimeMode : NSInteger{
 //    typealias RawValue = Int
     
     case forever = 99999,
-        halfAnHour = 1,
-        anHour = 2
+        halfAnHour = 30,
+        anHour = 60
 }
 
 
