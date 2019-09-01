@@ -19,7 +19,7 @@ enum TimeMode : NSInteger{
 
 
 
-//模仿蜗牛睡眠？
+//
 class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicCollectionDelegate, UIScrollViewDelegate {
     
     private var musicCollectionViews : Array<UICollectionView>!

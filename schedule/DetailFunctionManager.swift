@@ -92,6 +92,10 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                     self.goColock()
                 }
                 
+                if action == "goSchedule" {
+                    self.goSchedule()
+                }
+                
                 if action == "goBirthDay" {
                     //去生日提醒
                 }
@@ -122,6 +126,11 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
         let tomatoVC = TomatoViewController()
         (UIApplication.shared.delegate as! AppDelegate).navigationViewController.pushViewController(tomatoVC, animated: true)
         
+    }
+    
+    func goSchedule() {
+        let sheduleVC = ScheduleViewController()
+        (UIApplication.shared.delegate as! AppDelegate).navigationViewController.pushViewController(sheduleVC, animated: true)
     }
     
     func goBorthDay() {
@@ -160,6 +169,14 @@ class DetailFunctionManager : NSObject, UITableViewDelegate, UITableViewDataSour
                         "rightImage" : "icon_right_arrow",
                         "type" : "",
                         "action" : "goClock"
+                    ],
+                    
+                    [
+                        "title" : "敏捷人生",
+                        "leftImage" : "",
+                        "rightImage" : "icon_right_arrow",
+                        "type" : "",
+                        "action" : "goSchedule"
                     ],
                     
 

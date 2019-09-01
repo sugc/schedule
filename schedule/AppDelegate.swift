@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tab.viewControllers = [calendarVC,sleepVC, detailVC];
         navigationViewController.interactivePopGestureRecognizer?.isEnabled = false
         addLocalNotification()
+        UIApplication.shared.applicationIconBadgeNumber = 0
         AudioPlayer.initSession()
         return true
     }

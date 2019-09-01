@@ -130,10 +130,11 @@ class CountDownView : UIView {
     }
     
     func resumeWhenEnterForeGround(maxLeaveTime : TimeInterval! ) -> Bool {
+        var isInMaxLeaveTime = true
         let date = Date()
         let timeInterval = date.timeIntervalSince(starTime!)
         if timeInterval - countDownTimeInterval + remiandCountDown - maxLeaveTime > 0 {
-            return false
+            isInMaxLeaveTime = false
         }
         
         if timeInterval > (countDownTimeInterval - remiandCountDown) {
@@ -141,7 +142,7 @@ class CountDownView : UIView {
         }
         self.showLabelWithRemindCountDown(remindTime: remiandCountDown)
         timer?.resume()
-        return true
+        return isInMaxLeaveTime
     }
     
     func cancelCountDown() {

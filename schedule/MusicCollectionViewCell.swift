@@ -13,6 +13,7 @@ class MusicCollectionViewCell : UICollectionViewCell {
     private var label : UILabel!
     private var maskImageView : UIImageView!
     
+    
     var isShowMask : Bool! = false {
         didSet {
             maskImageView.isHidden = !isShowMask
@@ -89,6 +90,7 @@ class MusicCollectionViewCell : UICollectionViewCell {
             labelH = 15;
         }
         
+    
         var labelY = imageView.bottom + 10
         if imageView.bottom + 10 + labelH > self.height {
             labelY = self.height - labelH

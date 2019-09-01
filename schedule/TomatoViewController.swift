@@ -16,6 +16,9 @@
 
 import Foundation
 
+
+var isLocked : Bool = false
+
 class TomatoViewController : UIViewController {
     //一个倒计时时钟
     var countDonwView : CountDownView!
@@ -26,6 +29,7 @@ class TomatoViewController : UIViewController {
     private var mottoTextView : UITextView!
     private var cancelBtn : UIButton!  //
     private var lightBtn : UIButton!   //常亮按钮
+    private var shouldJudgeFail : Bool = false
     
     private var tomatoModel : Dictionary<String, Any>!
     private weak var alertVC : UIAlertController?
@@ -35,6 +39,7 @@ class TomatoViewController : UIViewController {
        
         (UIApplication.shared.delegate as! AppDelegate).navigationViewController.interactivePopGestureRecognizer?.isEnabled = false
         self.initUI()
+        
         
         //读取配置文件， 获取番茄时钟的时长，短休息时长，间隔几次有一个长休息，长休息时长
         
@@ -57,6 +62,12 @@ class TomatoViewController : UIViewController {
                                                selector: #selector(enterForeGround),
                                                name: UIApplication.willEnterForegroundNotification,
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(willLock),
+                                               name: UIApplication.protectedDataWillBecomeUnavailableNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didUnLock),
+                                               name: UIApplication.protectedDataDidBecomeAvailableNotification, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -154,29 +165,48 @@ class TomatoViewController : UIViewController {
         //获取番茄动画
     }
     
+    @objc func willLock() -> Void {
+        isLocked = true
+    }
+    
+    @objc func didUnLock() -> Void {
+        isLocked = false
+    }
     //进入后台，不停止计时， 通知提示
     @objc func enterBackGround() -> Void {
+        
         countDonwView.pause()
         
-        //是否需要后台保活? 默认开启
-        
-        if isCurrentRestTime {
-            //当前在休息不提示，休息结束时提示继续任务
-        }else {
-            //当前时间小于10s则不提示
-            if countDonwView.remiandTimeInterval > 5 {
-               addLocalNotification(title: "退到后台超过5秒即视为任务失败", fireDate: Date.init(timeIntervalSinceNow: 1))
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            if isLocked {
+                return;
+            }
+            
+            //是否需要后台保活? 默认开启
+            self.shouldJudgeFail = true
+            if self.isCurrentRestTime {
+                //当前在休息不提示，休息结束时提示继续任务
+            }else {
+                //当前时间小于10s则不提示
+                if self.countDonwView.remiandTimeInterval > 5 {
+                    addLocalNotification(title: "退到后台超过5秒即视为任务失败", fireDate: Date.init(timeIntervalSinceNow: 1))
+                }
             }
         }
-    
     }
     
     //判断进入后台的时间多久，超出则提示失败
     @objc func enterForeGround() -> Void {
         //判断进入后台多久, 暂定5s
 //        countDonwView.resumeWhenEnterForeGround()
-        if !countDonwView.resumeWhenEnterForeGround(maxLeaveTime: 5) {
+    
+        if isLocked {
+            return
+        }
+        
+        if !countDonwView.resumeWhenEnterForeGround(maxLeaveTime: 5) && shouldJudgeFail{
             //展示
+            
             weak var weakSelf = self
             let confirmAction = UIAlertAction.init(title: "确定",
                                                    style: UIAlertAction.Style.default,
@@ -189,6 +219,7 @@ class TomatoViewController : UIViewController {
             alert.addAction(confirmAction)
             self.present(alert, animated: true, completion: nil)
         }
+        shouldJudgeFail = false
     }
     
     //关闭当前页面

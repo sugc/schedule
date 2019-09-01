@@ -19,10 +19,12 @@
 		8922316221FA237800720A98 /* DetailFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922316121FA237800720A98 /* DetailFunctionViewController.swift */; };
 		8922316421FA23ED00720A98 /* DetailFunctionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922316321FA23ED00720A98 /* DetailFunctionManager.swift */; };
 		893C84CF20DC0D900007337E /* RemindListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893C84CE20DC0D900007337E /* RemindListViewController.swift */; };
+		8964CF6B22CA500700767279 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8964CF6A22CA500700767279 /* ScheduleModel.swift */; };
 		8966FCDC214D37A8005F1D8E /* TomatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966FCDB214D37A8005F1D8E /* TomatoViewController.swift */; };
 		8966FCDE214D3C61005F1D8E /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966FCDD214D3C61005F1D8E /* CountDownView.swift */; };
 		89842210221645DF00B0536B /* MusicMaterialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984220F221645DF00B0536B /* MusicMaterialManager.swift */; };
 		8984221222164AB900B0536B /* MusicMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984221122164AB900B0536B /* MusicMaterialModel.swift */; };
+		8988076B22D088FB00C6F5C2 /* ScheduleItemHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988076A22D088FB00C6F5C2 /* ScheduleItemHeader.swift */; };
 		898F6B20229A4E1F00FD855E /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F6B1F229A4E1F00FD855E /* SuggestionViewController.swift */; };
 		898F6B22229A507A00FD855E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F6B21229A507A00FD855E /* AboutViewController.swift */; };
 		89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */; };
@@ -32,6 +34,9 @@
 		89ADEF2522918C330037B4F4 /* Natural in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2322918C330037B4F4 /* Natural */; };
 		89B3832C20F211920096AD4D /* RemindListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3832B20F211920096AD4D /* RemindListViewCell.swift */; };
 		89B3C7EB2214F05400B4A6D1 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */; };
+		89BB033022C75C6500E379A8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB032F22C75C6500E379A8 /* ScheduleViewController.swift */; };
+		89BB033222C762A500E379A8 /* ATestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB033122C762A500E379A8 /* ATestHandler.swift */; };
+		89BB033422C76AED00E379A8 /* ScheduleItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB033322C76AED00E379A8 /* ScheduleItemCell.swift */; };
 		89C2E5E122494AD500950999 /* AudioMixTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2E5E022494AD500950999 /* AudioMixTool.swift */; };
 		89C3663E20BA61170077E0C7 /* AlterViewTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663D20BA61170077E0C7 /* AlterViewTool.swift */; };
 		89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */; };
@@ -91,10 +96,12 @@
 		8922316121FA237800720A98 /* DetailFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFunctionViewController.swift; sourceTree = "<group>"; };
 		8922316321FA23ED00720A98 /* DetailFunctionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFunctionManager.swift; sourceTree = "<group>"; };
 		893C84CE20DC0D900007337E /* RemindListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindListViewController.swift; sourceTree = "<group>"; };
+		8964CF6A22CA500700767279 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		8966FCDB214D37A8005F1D8E /* TomatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoViewController.swift; sourceTree = "<group>"; };
 		8966FCDD214D3C61005F1D8E /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8984220F221645DF00B0536B /* MusicMaterialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaterialManager.swift; sourceTree = "<group>"; };
 		8984221122164AB900B0536B /* MusicMaterialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMaterialModel.swift; sourceTree = "<group>"; };
+		8988076A22D088FB00C6F5C2 /* ScheduleItemHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemHeader.swift; sourceTree = "<group>"; };
 		898F6B1F229A4E1F00FD855E /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		898F6B21229A507A00FD855E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFuncTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +111,9 @@
 		89ADEF2322918C330037B4F4 /* Natural */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Natural; sourceTree = "<group>"; };
 		89B3832B20F211920096AD4D /* RemindListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindListViewCell.swift; sourceTree = "<group>"; };
 		89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		89BB032F22C75C6500E379A8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		89BB033122C762A500E379A8 /* ATestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATestHandler.swift; sourceTree = "<group>"; };
+		89BB033322C76AED00E379A8 /* ScheduleItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemCell.swift; sourceTree = "<group>"; };
 		89C2E5E022494AD500950999 /* AudioMixTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixTool.swift; sourceTree = "<group>"; };
 		89C3663D20BA61170077E0C7 /* AlterViewTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterViewTool.swift; sourceTree = "<group>"; };
 		89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +201,8 @@
 				89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */,
 				891AD8872200A6D60005F21B /* TopBarCell.swift */,
 				89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */,
+				89BB033322C76AED00E379A8 /* ScheduleItemCell.swift */,
+				8988076A22D088FB00C6F5C2 /* ScheduleItemHeader.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -234,6 +246,7 @@
 				8918CDD62211D84F00F3568C /* MusicCollectionViewManager.swift */,
 				8984220F221645DF00B0536B /* MusicMaterialManager.swift */,
 				8920F2C2222CAD0A00C537A5 /* AudioPlayer.swift */,
+				89BB033122C762A500E379A8 /* ATestHandler.swift */,
 			);
 			name = Handler;
 			sourceTree = "<group>";
@@ -255,6 +268,7 @@
 				898F6B21229A507A00FD855E /* AboutViewController.swift */,
 				89FE4B2922ACE0DA005FCA63 /* SettingViewController.swift */,
 				89FE4B2B22ACE3F6005FCA63 /* DonateViewController.swift */,
+				89BB032F22C75C6500E379A8 /* ScheduleViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -265,6 +279,7 @@
 				8A1E87DD1EFA8831003E6705 /* EventModel.swift */,
 				89C3664520BA7E960077E0C7 /* ReminderModel.swift */,
 				8984221122164AB900B0536B /* MusicMaterialModel.swift */,
+				8964CF6A22CA500700767279 /* ScheduleModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -575,11 +590,14 @@
 				8A1E87D71EFA86B0003E6705 /* ReminderManager.swift in Sources */,
 				8922316021FA22FD00720A98 /* SleepAudioViewController.swift in Sources */,
 				8920F2C3222CAD0A00C537A5 /* AudioPlayer.swift in Sources */,
+				89BB033422C76AED00E379A8 /* ScheduleItemCell.swift in Sources */,
+				8988076B22D088FB00C6F5C2 /* ScheduleItemHeader.swift in Sources */,
 				8A1E87D91EFA874D003E6705 /* CalendarManager.swift in Sources */,
 				891AD8882200A6D60005F21B /* TopBarCell.swift in Sources */,
 				89FE4B2A22ACE0DA005FCA63 /* SettingViewController.swift in Sources */,
 				89FE4B3222AD5D14005FCA63 /* TipsView.swift in Sources */,
 				89AA151421EF872C00A095DD /* DesignedUtils.swift in Sources */,
+				89BB033222C762A500E379A8 /* ATestHandler.swift in Sources */,
 				89842210221645DF00B0536B /* MusicMaterialManager.swift in Sources */,
 				89A8850222AEBA850000BD35 /* UnblockTipsView.swift in Sources */,
 				89B3832C20F211920096AD4D /* RemindListViewCell.swift in Sources */,
@@ -589,6 +607,7 @@
 				89C3664620BA7E960077E0C7 /* ReminderModel.swift in Sources */,
 				8918CDD72211D84F00F3568C /* MusicCollectionViewManager.swift in Sources */,
 				898F6B20229A4E1F00FD855E /* SuggestionViewController.swift in Sources */,
+				8964CF6B22CA500700767279 /* ScheduleModel.swift in Sources */,
 				89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */,
 				89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */,
 				8922316221FA237800720A98 /* DetailFunctionViewController.swift in Sources */,
@@ -607,6 +626,7 @@
 				8909ABE120DFDFEF00F13AE9 /* DBManager.swift in Sources */,
 				89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */,
 				8966FCDC214D37A8005F1D8E /* TomatoViewController.swift in Sources */,
+				89BB033022C75C6500E379A8 /* ScheduleViewController.swift in Sources */,
 				8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */,
 				8A5D972C1EF29FAB004019C9 /* AppDelegate.swift in Sources */,
 				8922316421FA23ED00720A98 /* DetailFunctionManager.swift in Sources */,
