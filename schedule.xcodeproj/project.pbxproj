@@ -7,6 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A6A678724C46ECF007CAAEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A678624C46ECF007CAAEE /* AppDelegate.swift */; };
+		0A6A678924C46ECF007CAAEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A678824C46ECF007CAAEE /* SceneDelegate.swift */; };
+		0A6A678B24C46ECF007CAAEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A678A24C46ECF007CAAEE /* ViewController.swift */; };
+		0A6A678E24C46ECF007CAAEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A678C24C46ECF007CAAEE /* Main.storyboard */; };
+		0A6A679024C46ED0007CAAEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A678F24C46ED0007CAAEE /* Assets.xcassets */; };
+		0A6A679324C46ED0007CAAEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6A679124C46ED0007CAAEE /* LaunchScreen.storyboard */; };
+		0A6A679F24C46ED0007CAAEE /* schedule_ClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A679E24C46ED0007CAAEE /* schedule_ClipTests.swift */; };
+		0A6A67AA24C46ED0007CAAEE /* schedule_ClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67A924C46ED0007CAAEE /* schedule_ClipUITests.swift */; };
+		0A6A67AE24C46ED0007CAAEE /* schedule Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0A6A678424C46ECF007CAAEE /* schedule Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0A6A67C624C47070007CAAEE /* AlterViewTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67C524C47070007CAAEE /* AlterViewTool.swift */; };
+		0A6A67C824C47079007CAAEE /* AudioMixTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67C724C47079007CAAEE /* AudioMixTool.swift */; };
+		0A6A67C924C4708F007CAAEE /* AudioMixTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67C724C47079007CAAEE /* AudioMixTool.swift */; };
+		0A6A67CA24C4708F007CAAEE /* AlterViewTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67C524C47070007CAAEE /* AlterViewTool.swift */; };
+		0A6A67CB24C47095007CAAEE /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2222A823F2005FCA63 /* UIView+Utils.swift */; };
+		0A6A67CC24C47095007CAAEE /* UIButton+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2322A823F2005FCA63 /* UIButton+image.swift */; };
+		0A6A67CE24C47110007CAAEE /* DesignedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67CD24C47110007CAAEE /* DesignedUtils.swift */; };
+		0A6A67D024C47130007CAAEE /* TouchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67CF24C4712F007CAAEE /* TouchesView.swift */; };
+		0A6A67D324C473AF007CAAEE /* SleepAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */; };
+		0A6A67D424C473B1007CAAEE /* SimpleBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B2E22ACE58A005FCA63 /* SimpleBackViewController.swift */; };
+		0A6A67D624C47445007CAAEE /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920F2C2222CAD0A00C537A5 /* AudioPlayer.swift */; };
+		0A6A67D724C47445007CAAEE /* MusicMaterialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984220F221645DF00B0536B /* MusicMaterialManager.swift */; };
+		0A6A67D824C47445007CAAEE /* MusicCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8918CDD62211D84F00F3568C /* MusicCollectionViewManager.swift */; };
+		0A6A67DA24C4746F007CAAEE /* MusicMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984221122164AB900B0536B /* MusicMaterialModel.swift */; };
+		0A6A67DC24C474A5007CAAEE /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE4B3122AD5D14005FCA63 /* TipsView.swift */; };
+		0A6A67DD24C474A5007CAAEE /* UnblockTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A8850122AEBA850000BD35 /* UnblockTipsView.swift */; };
+		0A6A67DE24C474A5007CAAEE /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */; };
+		0A6A67DF24C474D0007CAAEE /* TouchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67CF24C4712F007CAAEE /* TouchesView.swift */; };
+		0A6A67E024C474D8007CAAEE /* DesignedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6A67CD24C47110007CAAEE /* DesignedUtils.swift */; };
+		0A6A67E124C475ED007CAAEE /* TopBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891AD8872200A6D60005F21B /* TopBarCell.swift */; };
+		0A6A67E224C47603007CAAEE /* TopBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891AD8892200AE4E0005F21B /* TopBarManager.swift */; };
+		0A6A67E324C47704007CAAEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D97321EF29FAB004019C9 /* Assets.xcassets */; };
+		0A6A67E524C4773F007CAAEE /* Animal in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2222918C330037B4F4 /* Animal */; };
+		0A6A67E624C4773F007CAAEE /* Natural in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2322918C330037B4F4 /* Natural */; };
 		535194D70211F2DE1031EC89 /* Pods_schedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F222BAEFF2F315F5316989D /* Pods_schedule.framework */; };
 		8909ABE120DFDFEF00F13AE9 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8909ABE020DFDFEF00F13AE9 /* DBManager.swift */; };
 		89145FD021F44890006D26E6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89145FCF21F44890006D26E6 /* CalendarViewController.swift */; };
@@ -29,7 +62,6 @@
 		898F6B22229A507A00FD855E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F6B21229A507A00FD855E /* AboutViewController.swift */; };
 		89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */; };
 		89A8850222AEBA850000BD35 /* UnblockTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A8850122AEBA850000BD35 /* UnblockTipsView.swift */; };
-		89AA151421EF872C00A095DD /* DesignedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA151321EF872C00A095DD /* DesignedUtils.swift */; };
 		89ADEF2422918C330037B4F4 /* Animal in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2222918C330037B4F4 /* Animal */; };
 		89ADEF2522918C330037B4F4 /* Natural in Resources */ = {isa = PBXBuildFile; fileRef = 89ADEF2322918C330037B4F4 /* Natural */; };
 		89B3832C20F211920096AD4D /* RemindListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3832B20F211920096AD4D /* RemindListViewCell.swift */; };
@@ -37,8 +69,6 @@
 		89BB033022C75C6500E379A8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB032F22C75C6500E379A8 /* ScheduleViewController.swift */; };
 		89BB033222C762A500E379A8 /* ATestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB033122C762A500E379A8 /* ATestHandler.swift */; };
 		89BB033422C76AED00E379A8 /* ScheduleItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB033322C76AED00E379A8 /* ScheduleItemCell.swift */; };
-		89C2E5E122494AD500950999 /* AudioMixTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2E5E022494AD500950999 /* AudioMixTool.swift */; };
-		89C3663E20BA61170077E0C7 /* AlterViewTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663D20BA61170077E0C7 /* AlterViewTool.swift */; };
 		89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */; };
 		89C3664220BA6BB60077E0C7 /* Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C3664120BA6BB60077E0C7 /* Reminder.storyboard */; };
 		89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3664320BA6E3F0077E0C7 /* ViewController.swift */; };
@@ -60,10 +90,30 @@
 		8A5D97361EF29FAB004019C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D97341EF29FAB004019C9 /* LaunchScreen.storyboard */; };
 		8A5D97411EF29FAB004019C9 /* scheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D97401EF29FAB004019C9 /* scheduleTests.swift */; };
 		8A5D974C1EF29FAB004019C9 /* scheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D974B1EF29FAB004019C9 /* scheduleUITests.swift */; };
-		8AD11D3820B57A4400966295 /* TouchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD11D3720B57A4400966295 /* TouchesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A6A679B24C46ED0007CAAEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5D97201EF29FAB004019C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A6A678324C46ECF007CAAEE;
+			remoteInfo = "schedule Clip";
+		};
+		0A6A67A624C46ED0007CAAEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5D97201EF29FAB004019C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A6A678324C46ECF007CAAEE;
+			remoteInfo = "schedule Clip";
+		};
+		0A6A67AC24C46ED0007CAAEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5D97201EF29FAB004019C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A6A678324C46ECF007CAAEE;
+			remoteInfo = "schedule Clip";
+		};
 		8A5D973D1EF29FAB004019C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A5D97201EF29FAB004019C9 /* Project object */;
@@ -80,7 +130,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0A6A67AF24C46ED0007CAAEE /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				0A6A67AE24C46ED0007CAAEE /* schedule Clip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0A6A678424C46ECF007CAAEE /* schedule Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "schedule Clip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6A678624C46ECF007CAAEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A6A678824C46ECF007CAAEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0A6A678A24C46ECF007CAAEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A6A678D24C46ECF007CAAEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A6A678F24C46ED0007CAAEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A6A679224C46ED0007CAAEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A6A679424C46ED0007CAAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A6A679524C46ED0007CAAEE /* schedule_Clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schedule_Clip.entitlements; sourceTree = "<group>"; };
+		0A6A679A24C46ED0007CAAEE /* schedule ClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "schedule ClipTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6A679E24C46ED0007CAAEE /* schedule_ClipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedule_ClipTests.swift; sourceTree = "<group>"; };
+		0A6A67A024C46ED0007CAAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A6A67A524C46ED0007CAAEE /* schedule ClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "schedule ClipUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6A67A924C46ED0007CAAEE /* schedule_ClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedule_ClipUITests.swift; sourceTree = "<group>"; };
+		0A6A67AB24C46ED0007CAAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A6A67C524C47070007CAAEE /* AlterViewTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlterViewTool.swift; path = schedule/AlterViewTool.swift; sourceTree = SOURCE_ROOT; };
+		0A6A67C724C47079007CAAEE /* AudioMixTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioMixTool.swift; path = schedule/AudioMixTool.swift; sourceTree = SOURCE_ROOT; };
+		0A6A67CD24C47110007CAAEE /* DesignedUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignedUtils.swift; path = schedule/DesignedUtils.swift; sourceTree = SOURCE_ROOT; };
+		0A6A67CF24C4712F007CAAEE /* TouchesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchesView.swift; path = schedule/TouchesView.swift; sourceTree = SOURCE_ROOT; };
 		2404E69C77057A3F6B9D8D49 /* Pods-schedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schedule.release.xcconfig"; path = "Pods/Target Support Files/Pods-schedule/Pods-schedule.release.xcconfig"; sourceTree = "<group>"; };
 		4F222BAEFF2F315F5316989D /* Pods_schedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63785137CEE0861F63DA6A7C /* Pods-schedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-schedule/Pods-schedule.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +189,6 @@
 		898F6B21229A507A00FD855E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFuncTableViewCell.swift; sourceTree = "<group>"; };
 		89A8850122AEBA850000BD35 /* UnblockTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnblockTipsView.swift; sourceTree = "<group>"; };
-		89AA151321EF872C00A095DD /* DesignedUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignedUtils.swift; sourceTree = "<group>"; };
 		89ADEF2222918C330037B4F4 /* Animal */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animal; sourceTree = "<group>"; };
 		89ADEF2322918C330037B4F4 /* Natural */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Natural; sourceTree = "<group>"; };
 		89B3832B20F211920096AD4D /* RemindListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindListViewCell.swift; sourceTree = "<group>"; };
@@ -114,8 +196,6 @@
 		89BB032F22C75C6500E379A8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		89BB033122C762A500E379A8 /* ATestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATestHandler.swift; sourceTree = "<group>"; };
 		89BB033322C76AED00E379A8 /* ScheduleItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemCell.swift; sourceTree = "<group>"; };
-		89C2E5E022494AD500950999 /* AudioMixTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixTool.swift; sourceTree = "<group>"; };
-		89C3663D20BA61170077E0C7 /* AlterViewTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterViewTool.swift; sourceTree = "<group>"; };
 		89C3663F20BA6B040077E0C7 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		89C3664120BA6BB60077E0C7 /* Reminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
 		89C3664320BA6E3F0077E0C7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,10 +225,30 @@
 		8A5D97471EF29FAB004019C9 /* scheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5D974B1EF29FAB004019C9 /* scheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleUITests.swift; sourceTree = "<group>"; };
 		8A5D974D1EF29FAB004019C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AD11D3720B57A4400966295 /* TouchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A6A678124C46ECF007CAAEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6A679724C46ED0007CAAEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6A67A224C46ED0007CAAEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A5D97251EF29FAB004019C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +274,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A6A678524C46ECF007CAAEE /* schedule Clip */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A678624C46ECF007CAAEE /* AppDelegate.swift */,
+				0A6A678824C46ECF007CAAEE /* SceneDelegate.swift */,
+				0A6A678A24C46ECF007CAAEE /* ViewController.swift */,
+				0A6A678C24C46ECF007CAAEE /* Main.storyboard */,
+				0A6A678F24C46ED0007CAAEE /* Assets.xcassets */,
+				0A6A679124C46ED0007CAAEE /* LaunchScreen.storyboard */,
+				0A6A679424C46ED0007CAAEE /* Info.plist */,
+				0A6A679524C46ED0007CAAEE /* schedule_Clip.entitlements */,
+			);
+			path = "schedule Clip";
+			sourceTree = "<group>";
+		};
+		0A6A679D24C46ED0007CAAEE /* schedule ClipTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A679E24C46ED0007CAAEE /* schedule_ClipTests.swift */,
+				0A6A67A024C46ED0007CAAEE /* Info.plist */,
+			);
+			path = "schedule ClipTests";
+			sourceTree = "<group>";
+		};
+		0A6A67A824C46ED0007CAAEE /* schedule ClipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A67A924C46ED0007CAAEE /* schedule_ClipUITests.swift */,
+				0A6A67AB24C46ED0007CAAEE /* Info.plist */,
+			);
+			path = "schedule ClipUITests";
+			sourceTree = "<group>";
+		};
+		0A6A67BA24C46F05007CAAEE /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A67E424C47728007CAAEE /* Resource */,
+				0A6A67DB24C47488007CAAEE /* View */,
+				0A6A67D924C47453007CAAEE /* Model */,
+				0A6A67D524C47411007CAAEE /* Handler */,
+				0A6A67D124C4737A007CAAEE /* ViewController */,
+				0A6A67C424C47031007CAAEE /* Utils */,
+				89FE4B2122A823E3005FCA63 /* Extension */,
+				8A5D97321EF29FAB004019C9 /* Assets.xcassets */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		0A6A67C424C47031007CAAEE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0A6A67CF24C4712F007CAAEE /* TouchesView.swift */,
+				0A6A67CD24C47110007CAAEE /* DesignedUtils.swift */,
+				0A6A67C724C47079007CAAEE /* AudioMixTool.swift */,
+				0A6A67C524C47070007CAAEE /* AlterViewTool.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0A6A67D124C4737A007CAAEE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */,
+				0A6A67D224C47390007CAAEE /* common */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0A6A67D224C47390007CAAEE /* common */ = {
+			isa = PBXGroup;
+			children = (
+				89FE4B2E22ACE58A005FCA63 /* SimpleBackViewController.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		0A6A67D524C47411007CAAEE /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				891AD8892200AE4E0005F21B /* TopBarManager.swift */,
+				8918CDD62211D84F00F3568C /* MusicCollectionViewManager.swift */,
+				8984220F221645DF00B0536B /* MusicMaterialManager.swift */,
+				8920F2C2222CAD0A00C537A5 /* AudioPlayer.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		0A6A67D924C47453007CAAEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8984221122164AB900B0536B /* MusicMaterialModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A6A67DB24C47488007CAAEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89FE4B3122AD5D14005FCA63 /* TipsView.swift */,
+				89A8850122AEBA850000BD35 /* UnblockTipsView.swift */,
+				89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */,
+				891AD8872200A6D60005F21B /* TopBarCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A6A67E424C47728007CAAEE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				89ADEF2222918C330037B4F4 /* Animal */,
+				89ADEF2322918C330037B4F4 /* Natural */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		4433A1359C841BA5BB33034A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,8 +401,6 @@
 		89ADEEEB229152650037B4F4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				89ADEF2222918C330037B4F4 /* Animal */,
-				89ADEF2322918C330037B4F4 /* Natural */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -199,8 +412,6 @@
 				89B3832B20F211920096AD4D /* RemindListViewCell.swift */,
 				8966FCDD214D3C61005F1D8E /* CountDownView.swift */,
 				89992EAB21FDB20D006F20DA /* DetailFuncTableViewCell.swift */,
-				891AD8872200A6D60005F21B /* TopBarCell.swift */,
-				89B3C7EA2214F05400B4A6D1 /* MusicCollectionViewCell.swift */,
 				89BB033322C76AED00E379A8 /* ScheduleItemCell.swift */,
 				8988076A22D088FB00C6F5C2 /* ScheduleItemHeader.swift */,
 			);
@@ -219,7 +430,6 @@
 		89FE4B2D22ACE510005FCA63 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				89FE4B2E22ACE58A005FCA63 /* SimpleBackViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -227,8 +437,6 @@
 		89FE4B3022AD5C74005FCA63 /* CommonUtil */ = {
 			isa = PBXGroup;
 			children = (
-				89FE4B3122AD5D14005FCA63 /* TipsView.swift */,
-				89A8850122AEBA850000BD35 /* UnblockTipsView.swift */,
 			);
 			path = CommonUtil;
 			sourceTree = "<group>";
@@ -242,10 +450,6 @@
 				8909ABE020DFDFEF00F13AE9 /* DBManager.swift */,
 				89145FD621F49A8A006D26E6 /* RemindTableViewManager.swift */,
 				8922316321FA23ED00720A98 /* DetailFunctionManager.swift */,
-				891AD8892200AE4E0005F21B /* TopBarManager.swift */,
-				8918CDD62211D84F00F3568C /* MusicCollectionViewManager.swift */,
-				8984220F221645DF00B0536B /* MusicMaterialManager.swift */,
-				8920F2C2222CAD0A00C537A5 /* AudioPlayer.swift */,
 				89BB033122C762A500E379A8 /* ATestHandler.swift */,
 			);
 			name = Handler;
@@ -263,7 +467,6 @@
 				893C84CE20DC0D900007337E /* RemindListViewController.swift */,
 				8966FCDB214D37A8005F1D8E /* TomatoViewController.swift */,
 				89145FCF21F44890006D26E6 /* CalendarViewController.swift */,
-				8922315F21FA22FD00720A98 /* SleepAudioViewController.swift */,
 				8922316121FA237800720A98 /* DetailFunctionViewController.swift */,
 				898F6B21229A507A00FD855E /* AboutViewController.swift */,
 				89FE4B2922ACE0DA005FCA63 /* SettingViewController.swift */,
@@ -278,7 +481,6 @@
 			children = (
 				8A1E87DD1EFA8831003E6705 /* EventModel.swift */,
 				89C3664520BA7E960077E0C7 /* ReminderModel.swift */,
-				8984221122164AB900B0536B /* MusicMaterialModel.swift */,
 				8964CF6A22CA500700767279 /* ScheduleModel.swift */,
 			);
 			name = Model;
@@ -287,11 +489,15 @@
 		8A5D971F1EF29FAB004019C9 = {
 			isa = PBXGroup;
 			children = (
+				0A6A67BA24C46F05007CAAEE /* Share */,
 				8909ABDF20DFD79000F13AE9 /* schedule-Bridging-Header.h */,
 				89FE4B2622AB9499005FCA63 /* GoogleService-Info.plist */,
 				8A5D972A1EF29FAB004019C9 /* schedule */,
 				8A5D973F1EF29FAB004019C9 /* scheduleTests */,
 				8A5D974A1EF29FAB004019C9 /* scheduleUITests */,
+				0A6A678524C46ECF007CAAEE /* schedule Clip */,
+				0A6A679D24C46ED0007CAAEE /* schedule ClipTests */,
+				0A6A67A824C46ED0007CAAEE /* schedule ClipUITests */,
 				8A5D97291EF29FAB004019C9 /* Products */,
 				4433A1359C841BA5BB33034A /* Pods */,
 				BBA4597F0CF968E8F0806019 /* Frameworks */,
@@ -304,6 +510,9 @@
 				8A5D97281EF29FAB004019C9 /* schedule.app */,
 				8A5D973C1EF29FAB004019C9 /* scheduleTests.xctest */,
 				8A5D97471EF29FAB004019C9 /* scheduleUITests.xctest */,
+				0A6A678424C46ECF007CAAEE /* schedule Clip.app */,
+				0A6A679A24C46ED0007CAAEE /* schedule ClipTests.xctest */,
+				0A6A67A524C46ED0007CAAEE /* schedule ClipUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,8 +520,6 @@
 		8A5D972A1EF29FAB004019C9 /* schedule */ = {
 			isa = PBXGroup;
 			children = (
-				89FE4B2122A823E3005FCA63 /* Extension */,
-				8AD11D3620B57A2800966295 /* Util */,
 				8A1E87DC1EFA880F003E6705 /* Model */,
 				89B3832A20F2106C0096AD4D /* View */,
 				8A1E87D41EFA861B003E6705 /* ViewController */,
@@ -320,7 +527,6 @@
 				8A0816BB1EF4137F00A88820 /* schedule.entitlements */,
 				8A5D972B1EF29FAB004019C9 /* AppDelegate.swift */,
 				8A0816BC1EF4176700A88820 /* test.caf */,
-				8A5D97321EF29FAB004019C9 /* Assets.xcassets */,
 				89ADEEEB229152650037B4F4 /* Resource */,
 				8A5D97341EF29FAB004019C9 /* LaunchScreen.storyboard */,
 				8A5D97371EF29FAB004019C9 /* Info.plist */,
@@ -346,17 +552,6 @@
 			path = scheduleUITests;
 			sourceTree = "<group>";
 		};
-		8AD11D3620B57A2800966295 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				89AA151321EF872C00A095DD /* DesignedUtils.swift */,
-				8AD11D3720B57A4400966295 /* TouchesView.swift */,
-				89C3663D20BA61170077E0C7 /* AlterViewTool.swift */,
-				89C2E5E022494AD500950999 /* AudioMixTool.swift */,
-			);
-			name = Util;
-			sourceTree = "<group>";
-		};
 		BBA4597F0CF968E8F0806019 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +563,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0A6A678324C46ECF007CAAEE /* schedule Clip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A6A67B624C46ED0007CAAEE /* Build configuration list for PBXNativeTarget "schedule Clip" */;
+			buildPhases = (
+				0A6A678024C46ECF007CAAEE /* Sources */,
+				0A6A678124C46ECF007CAAEE /* Frameworks */,
+				0A6A678224C46ECF007CAAEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "schedule Clip";
+			productName = "schedule Clip";
+			productReference = 0A6A678424C46ECF007CAAEE /* schedule Clip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		0A6A679924C46ED0007CAAEE /* schedule ClipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A6A67B724C46ED0007CAAEE /* Build configuration list for PBXNativeTarget "schedule ClipTests" */;
+			buildPhases = (
+				0A6A679624C46ED0007CAAEE /* Sources */,
+				0A6A679724C46ED0007CAAEE /* Frameworks */,
+				0A6A679824C46ED0007CAAEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A6A679C24C46ED0007CAAEE /* PBXTargetDependency */,
+			);
+			name = "schedule ClipTests";
+			productName = "schedule ClipTests";
+			productReference = 0A6A679A24C46ED0007CAAEE /* schedule ClipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A6A67A424C46ED0007CAAEE /* schedule ClipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A6A67B824C46ED0007CAAEE /* Build configuration list for PBXNativeTarget "schedule ClipUITests" */;
+			buildPhases = (
+				0A6A67A124C46ED0007CAAEE /* Sources */,
+				0A6A67A224C46ED0007CAAEE /* Frameworks */,
+				0A6A67A324C46ED0007CAAEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A6A67A724C46ED0007CAAEE /* PBXTargetDependency */,
+			);
+			name = "schedule ClipUITests";
+			productName = "schedule ClipUITests";
+			productReference = 0A6A67A524C46ED0007CAAEE /* schedule ClipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		8A5D97271EF29FAB004019C9 /* schedule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A5D97501EF29FAB004019C9 /* Build configuration list for PBXNativeTarget "schedule" */;
@@ -378,10 +626,12 @@
 				8A5D97261EF29FAB004019C9 /* Resources */,
 				466508F3999045E185A76229 /* [CP] Embed Pods Frameworks */,
 				89FE4B2822AB977B005FCA63 /* ShellScript */,
+				0A6A67AF24C46ED0007CAAEE /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0A6A67AD24C46ED0007CAAEE /* PBXTargetDependency */,
 			);
 			name = schedule;
 			productName = schedule;
@@ -430,10 +680,27 @@
 		8A5D97201EF29FAB004019C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "魔方";
 				TargetAttributes = {
+					0A6A678324C46ECF007CAAEE = {
+						CreatedOnToolsVersion = 12.0;
+						DevelopmentTeam = 4D8QBLQTY5;
+						ProvisioningStyle = Automatic;
+					};
+					0A6A679924C46ED0007CAAEE = {
+						CreatedOnToolsVersion = 12.0;
+						DevelopmentTeam = 896K789QN9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0A6A678324C46ECF007CAAEE;
+					};
+					0A6A67A424C46ED0007CAAEE = {
+						CreatedOnToolsVersion = 12.0;
+						DevelopmentTeam = 896K789QN9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0A6A678324C46ECF007CAAEE;
+					};
 					8A5D97271EF29FAB004019C9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4D8QBLQTY5;
@@ -478,11 +745,41 @@
 				8A5D97271EF29FAB004019C9 /* schedule */,
 				8A5D973B1EF29FAB004019C9 /* scheduleTests */,
 				8A5D97461EF29FAB004019C9 /* scheduleUITests */,
+				0A6A678324C46ECF007CAAEE /* schedule Clip */,
+				0A6A679924C46ED0007CAAEE /* schedule ClipTests */,
+				0A6A67A424C46ED0007CAAEE /* schedule ClipUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0A6A678224C46ECF007CAAEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6A67E624C4773F007CAAEE /* Natural in Resources */,
+				0A6A67E524C4773F007CAAEE /* Animal in Resources */,
+				0A6A679324C46ED0007CAAEE /* LaunchScreen.storyboard in Resources */,
+				0A6A679024C46ED0007CAAEE /* Assets.xcassets in Resources */,
+				0A6A67E324C47704007CAAEE /* Assets.xcassets in Resources */,
+				0A6A678E24C46ECF007CAAEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6A679824C46ED0007CAAEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6A67A324C46ED0007CAAEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A5D97261EF29FAB004019C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,6 +880,49 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A6A678024C46ECF007CAAEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6A67DE24C474A5007CAAEE /* MusicCollectionViewCell.swift in Sources */,
+				0A6A67DD24C474A5007CAAEE /* UnblockTipsView.swift in Sources */,
+				0A6A678B24C46ECF007CAAEE /* ViewController.swift in Sources */,
+				0A6A678724C46ECF007CAAEE /* AppDelegate.swift in Sources */,
+				0A6A67DA24C4746F007CAAEE /* MusicMaterialModel.swift in Sources */,
+				0A6A678924C46ECF007CAAEE /* SceneDelegate.swift in Sources */,
+				0A6A67DC24C474A5007CAAEE /* TipsView.swift in Sources */,
+				0A6A67D324C473AF007CAAEE /* SleepAudioViewController.swift in Sources */,
+				0A6A67E024C474D8007CAAEE /* DesignedUtils.swift in Sources */,
+				0A6A67E224C47603007CAAEE /* TopBarManager.swift in Sources */,
+				0A6A67D824C47445007CAAEE /* MusicCollectionViewManager.swift in Sources */,
+				0A6A67D724C47445007CAAEE /* MusicMaterialManager.swift in Sources */,
+				0A6A67CA24C4708F007CAAEE /* AlterViewTool.swift in Sources */,
+				0A6A67CB24C47095007CAAEE /* UIView+Utils.swift in Sources */,
+				0A6A67D424C473B1007CAAEE /* SimpleBackViewController.swift in Sources */,
+				0A6A67DF24C474D0007CAAEE /* TouchesView.swift in Sources */,
+				0A6A67D624C47445007CAAEE /* AudioPlayer.swift in Sources */,
+				0A6A67CC24C47095007CAAEE /* UIButton+image.swift in Sources */,
+				0A6A67C924C4708F007CAAEE /* AudioMixTool.swift in Sources */,
+				0A6A67E124C475ED007CAAEE /* TopBarCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6A679624C46ED0007CAAEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6A679F24C46ED0007CAAEE /* schedule_ClipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A6A67A124C46ED0007CAAEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6A67AA24C46ED0007CAAEE /* schedule_ClipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A5D97241EF29FAB004019C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,25 +936,25 @@
 				891AD8882200A6D60005F21B /* TopBarCell.swift in Sources */,
 				89FE4B2A22ACE0DA005FCA63 /* SettingViewController.swift in Sources */,
 				89FE4B3222AD5D14005FCA63 /* TipsView.swift in Sources */,
-				89AA151421EF872C00A095DD /* DesignedUtils.swift in Sources */,
 				89BB033222C762A500E379A8 /* ATestHandler.swift in Sources */,
+				0A6A67D024C47130007CAAEE /* TouchesView.swift in Sources */,
 				89842210221645DF00B0536B /* MusicMaterialManager.swift in Sources */,
 				89A8850222AEBA850000BD35 /* UnblockTipsView.swift in Sources */,
 				89B3832C20F211920096AD4D /* RemindListViewCell.swift in Sources */,
-				8AD11D3820B57A4400966295 /* TouchesView.swift in Sources */,
 				891AD88A2200AE4E0005F21B /* TopBarManager.swift in Sources */,
 				89FE4B2422A823F2005FCA63 /* UIView+Utils.swift in Sources */,
 				89C3664620BA7E960077E0C7 /* ReminderModel.swift in Sources */,
 				8918CDD72211D84F00F3568C /* MusicCollectionViewManager.swift in Sources */,
 				898F6B20229A4E1F00FD855E /* SuggestionViewController.swift in Sources */,
 				8964CF6B22CA500700767279 /* ScheduleModel.swift in Sources */,
+				0A6A67CE24C47110007CAAEE /* DesignedUtils.swift in Sources */,
 				89992EAC21FDB20D006F20DA /* DetailFuncTableViewCell.swift in Sources */,
 				89C3664420BA6E3F0077E0C7 /* ViewController.swift in Sources */,
 				8922316221FA237800720A98 /* DetailFunctionViewController.swift in Sources */,
 				89B3C7EB2214F05400B4A6D1 /* MusicCollectionViewCell.swift in Sources */,
+				0A6A67C824C47079007CAAEE /* AudioMixTool.swift in Sources */,
 				89FE4B2C22ACE3F6005FCA63 /* DonateViewController.swift in Sources */,
 				8A1E87DB1EFA8777003E6705 /* LocalNotificationManager.swift in Sources */,
-				89C2E5E122494AD500950999 /* AudioMixTool.swift in Sources */,
 				8984221222164AB900B0536B /* MusicMaterialModel.swift in Sources */,
 				89FE4B2522A823F2005FCA63 /* UIButton+image.swift in Sources */,
 				89145FD021F44890006D26E6 /* CalendarViewController.swift in Sources */,
@@ -622,6 +962,7 @@
 				89145FD721F49A8A006D26E6 /* RemindTableViewManager.swift in Sources */,
 				89FE4B2F22ACE58A005FCA63 /* SimpleBackViewController.swift in Sources */,
 				8966FCDE214D3C61005F1D8E /* CountDownView.swift in Sources */,
+				0A6A67C624C47070007CAAEE /* AlterViewTool.swift in Sources */,
 				898F6B22229A507A00FD855E /* AboutViewController.swift in Sources */,
 				8909ABE120DFDFEF00F13AE9 /* DBManager.swift in Sources */,
 				89C3664020BA6B040077E0C7 /* ReminderViewController.swift in Sources */,
@@ -630,7 +971,6 @@
 				8A1E87DE1EFA8831003E6705 /* EventModel.swift in Sources */,
 				8A5D972C1EF29FAB004019C9 /* AppDelegate.swift in Sources */,
 				8922316421FA23ED00720A98 /* DetailFunctionManager.swift in Sources */,
-				89C3663E20BA61170077E0C7 /* AlterViewTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +993,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A6A679C24C46ED0007CAAEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A6A678324C46ECF007CAAEE /* schedule Clip */;
+			targetProxy = 0A6A679B24C46ED0007CAAEE /* PBXContainerItemProxy */;
+		};
+		0A6A67A724C46ED0007CAAEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A6A678324C46ECF007CAAEE /* schedule Clip */;
+			targetProxy = 0A6A67A624C46ED0007CAAEE /* PBXContainerItemProxy */;
+		};
+		0A6A67AD24C46ED0007CAAEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A6A678324C46ECF007CAAEE /* schedule Clip */;
+			targetProxy = 0A6A67AC24C46ED0007CAAEE /* PBXContainerItemProxy */;
+		};
 		8A5D973E1EF29FAB004019C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8A5D97271EF29FAB004019C9 /* schedule */;
@@ -666,6 +1021,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0A6A678C24C46ECF007CAAEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A6A678D24C46ECF007CAAEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A6A679124C46ED0007CAAEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A6A679224C46ED0007CAAEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		8A5D972F1EF29FAB004019C9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -685,6 +1056,159 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0A6A67B024C46ED0007CAAEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "schedule Clip/schedule_Clip.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.3.1;
+				DEVELOPMENT_TEAM = 4D8QBLQTY5;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "schedule Clip/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sugc.schedule.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0A6A67B124C46ED0007CAAEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "schedule Clip/schedule_Clip.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.3.1;
+				DEVELOPMENT_TEAM = 4D8QBLQTY5;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "schedule Clip/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.3;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sugc.schedule.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0A6A67B224C46ED0007CAAEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896K789QN9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "schedule ClipTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sugc.schedule.schedule-ClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/schedule Clip.app/schedule Clip";
+			};
+			name = Debug;
+		};
+		0A6A67B324C46ED0007CAAEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896K789QN9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "schedule ClipTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sugc.schedule.schedule-ClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/schedule Clip.app/schedule Clip";
+			};
+			name = Release;
+		};
+		0A6A67B424C46ED0007CAAEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896K789QN9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "schedule ClipUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sugc.schedule.schedule-ClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "schedule Clip";
+			};
+			name = Debug;
+		};
+		0A6A67B524C46ED0007CAAEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 896K789QN9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "schedule ClipUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sugc.schedule.schedule-ClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "schedule Clip";
+			};
+			name = Release;
+		};
 		8A5D974E1EF29FAB004019C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -800,6 +1324,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63785137CEE0861F63DA6A7C /* Pods-schedule.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -824,6 +1349,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2404E69C77057A3F6B9D8D49 /* Pods-schedule.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -904,6 +1430,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A6A67B624C46ED0007CAAEE /* Build configuration list for PBXNativeTarget "schedule Clip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6A67B024C46ED0007CAAEE /* Debug */,
+				0A6A67B124C46ED0007CAAEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A6A67B724C46ED0007CAAEE /* Build configuration list for PBXNativeTarget "schedule ClipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6A67B224C46ED0007CAAEE /* Debug */,
+				0A6A67B324C46ED0007CAAEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A6A67B824C46ED0007CAAEE /* Build configuration list for PBXNativeTarget "schedule ClipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6A67B424C46ED0007CAAEE /* Debug */,
+				0A6A67B524C46ED0007CAAEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8A5D97231EF29FAB004019C9 /* Build configuration list for PBXProject "schedule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

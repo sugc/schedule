@@ -18,8 +18,9 @@ let ScreenHeight : CGFloat = UIScreen.main.bounds.size.height
 
 var iPhoneXSafeDistanceTop : CGFloat {
     get {
+
         if #available(iOS 11.0, *) {
-            return (UIApplication.shared.delegate as! AppDelegate).window!.safeAreaInsets.top
+            return UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
         }
         return 0
     }
@@ -28,7 +29,7 @@ var iPhoneXSafeDistanceTop : CGFloat {
 var iPhoneXSafeDistanceBottom : CGFloat {
     get {
         if #available(iOS 11.0, *) {
-            return (UIApplication.shared.delegate as! AppDelegate).window!.safeAreaInsets.bottom
+            return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
         }
         return 0
     }

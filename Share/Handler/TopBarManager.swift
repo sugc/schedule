@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 @objc protocol TopBarManagerDelegate : NSObjectProtocol {
     @objc func didSelectAtIndex(index : NSInteger)->Void

@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import SDWebImage
+import UIKit
+//import SDWebImage
 
 enum TimeMode : NSInteger{
 //    typealias RawValue = Int
@@ -133,7 +134,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
         let scrollViewFrame : CGRect = CGRect.init(x: 0,
                                                    y: playerView.bottom + scrollSpace,
                                                width: ScreenWidth,
-                                            height: ScreenHeight - self.tabBarController!.tabBar.height - playerView.bottom - scrollSpace)
+                                               height: ScreenHeight - ((self.tabBarController?.tabBar.height) ?? 0) - playerView.bottom - scrollSpace)
         scrollView = UIScrollView.init(frame: scrollViewFrame)
         scrollView.contentSize = CGSize.init(width: scrollView.width * CGFloat(musicCollectionViewManager.numberOfCollection), height: scrollView.height)
         scrollView.isPagingEnabled = true
@@ -274,7 +275,7 @@ class SleepAudioViewController : UIViewController, TopBarManagerDelegate, MusicC
                 }
                 
                 if model.type == urlType.remote {
-                    imageViews[i].sd_setImage(with: URL.init(string: imgUrl), placeholderImage: nil, options: SDWebImageOptions.delayPlaceholder, completed: nil)
+//                    imageViews[i].sd_setImage(with: URL.init(string: imgUrl), placeholderImage: nil, options: SDWebImageOptions.delayPlaceholder, completed: nil)
                 }else {
                     imageViews[i].image = UIImage.init(named: imgUrl)
                 }
